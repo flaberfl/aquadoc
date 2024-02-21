@@ -1,0 +1,28 @@
+// Подключение общих CSS-переменных
+:root {
+  //* Переменные
+  --header-height: 9.6rem;
+
+  //* Цвета
+  --main-color: #fffff;
+  --font-color: #F5F5F5;
+  --btn-color: #2CD996;
+  // --grey-color: #5D6376;
+  // --orange-color: #E16C00;
+  // --hover-color: #FDA350;
+  --body-color: #0A0A19;
+  --border-radius: 4rem;
+  --btn-background: linear-gradient(94deg, #FBBF01 -1.4%, #E24C30 95.99%);
+  --shadow: 0px 22px 40px 0px rgba(0, 0, 0, 0.19);
+
+
+  //== 992px ==//
+  @media (max-width:$tablet) {
+    --header-height: 6.6rem;
+  }
+
+  //== 576px ==//
+  // @media (max-width: $mb-m) {
+  //   --header-height: 3.5625rem;
+  // }
+}
