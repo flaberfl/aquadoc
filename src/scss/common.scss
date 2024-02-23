@@ -1,27 +1,30 @@
-.title-h1 {
-	font-family: Montserrat;
-	font-size: 92px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
-	letter-spacing: 4.6px;
 
-	// @media (max-width:$tablet) {
-	// 	text-align: center;
-	// }
-
-	// @media (max-width: em(600)) {
-	// 	text-align: left;
-	// }
-}
-
+.title-h1,
+.title-h1 span,
 .title-h2 {
-	font-size: 76px;
-	font-weight: 600;
-	line-height: normal;
-	letter-spacing: 3.8px;
-	text-align: center;
+	font-family: Montserrat Alternates;
+	@include adaptiveValue("font-size", 55, 27);
+
+	font-weight: 700;
+	line-height: 70px;
+	letter-spacing: 5%;
+
+
+	@media (max-width:$tablet) {
+		line-height: 37px;
+	}
 }
+
+.title-h1 span {
+	@include adaptiveValue("font-size", 38, 18);
+
+	@media (max-width:$tablet) {
+		line-height: 28px;
+	}
+}
+
+
+
 
 
 
