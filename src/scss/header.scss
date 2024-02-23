@@ -16,7 +16,7 @@
 		left: 0;
 		width: 100%;
 		padding: toRem(5) 0;
-		@include adaptiveValue("height", 154, 70);
+		@include adaptiveValue("height", 130, 60);
 		// transition: transform 0.37s ease-in-out, min-height 0.25s ease-in-out,
 		// 	background-color 0.25s ease-in-out;
 		transition: all 0.4s;
@@ -48,8 +48,8 @@
 	&__logo {
 		img {
 			max-width: 100%;
-			@include adaptiveValue("width", 194, 97);
-			@include adaptiveValue("height", 84, 42);
+			@include adaptiveValue("width", 235, 97);
+			@include adaptiveValue("height", 102, 20);
 		}
 
 		@include adaptiveValue("margin-right", 130, 20);
