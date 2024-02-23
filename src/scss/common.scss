@@ -1,9 +1,3 @@
-// Заголовки, загальні БЕМ блоки та інше...
-
-.bottom-d {
-	height: 400px;
-}
-
 .title-h1 {
 	font-family: Montserrat;
 	font-size: 92px;
@@ -21,32 +15,6 @@
 	// }
 }
 
-// .subtitle-h2 {
-// 	position: relative;
-// 	// padding-left: toRem(80);
-// 	@include adaptiveValue("padding-left", 80, 46);
-
-// 	@include adaptiveValue("font-size", 24, 18);
-// 	font-weight: 400;
-// 	letter-spacing: 1.2px;
-// 	color: rgba(255, 255, 255, 0.97);
-// 	line-height: normal;
-
-// 	&::before {
-// 		content: '';
-// 		position: absolute;
-// 		left: 0;
-// 		top: toRem(12);
-// 		height: toRem(2);
-// 		@include adaptiveValue("width", 54, 32);
-// 		background: rgba(255, 255, 255, 0.97);
-// 	}
-
-// 	@media (max-width:$mobile) {
-// 		letter-spacing: 0.9px;
-// 	}
-// }
-
 .title-h2 {
 	font-size: 76px;
 	font-weight: 600;
@@ -54,67 +22,6 @@
 	letter-spacing: 3.8px;
 	text-align: center;
 }
-
-.list-line {
-	@include adaptiveValue("width", 16, 10);
-	background-color: #BCC0CC;
-	height: toRem(1);
-}
-
-.decor-span {
-	&__item {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		transition: all 0.3s;
-
-		// &::before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	@include adaptiveValue("width", 57, 42);
-		// 	@include adaptiveValue("height", 57, 42);
-		// 	background: url('@img/decor-circle.svg') 0 0 no-repeat;
-		// 	z-index: 10;
-		// }
-
-		&::after {
-			content: '';
-			position: absolute;
-			@include adaptiveValue("width", 85, 63);
-			@include adaptiveValue("height", 85, 63);
-
-			background: radial-gradient(50.59% 50.59% at 50.59% 49.41%, rgba(154, 118, 230, 0.66) 0%, rgba(6, 21, 155, 0.66) 100%);
-			border-radius: 50%;
-			filter: blur(20px);
-			z-index: -1;
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				.decor-span__icon {
-					opacity: 0.5;
-				}
-			}
-		}
-	}
-
-	&__before {
-
-		@include adaptiveValue("width", 57, 42);
-		@include adaptiveValue("height", 57, 42);
-		z-index: 20;
-	}
-
-	&__icon {
-		position: absolute;
-		z-index: 20;
-		transition: all 0.3s;
-	}
-}
-
-
 
 
 
