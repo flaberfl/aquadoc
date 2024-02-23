@@ -41,7 +41,6 @@
 	&__container {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		width: 100%;
 	}
 
@@ -53,8 +52,6 @@
 			@include adaptiveValue("width", 235, 97);
 			@include adaptiveValue("height", 102, 20);
 		}
-
-		@include adaptiveValue("margin-right", 130, 20);
 	}
 
 	&__menu {
@@ -62,22 +59,33 @@
 
 	}
 
-	&__contact {}
+	&__contact {
+		display: flex;
+		gap: toRem(18);
+		align-items: center;
+	}
 
 	&__phone {}
 
+	&__right {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 90, 15);
+	}
+
 	&__time {
-		display: block;
-		font-size: 16px;
-		line-height: normal;
-		letter-spacing: 0.8px;
-		text-align: right;
+		font-size: toRem(14);
+	}
+
+	&__line {
+		width: toRem(16);
+		height: toRem(1);
+		background-color: #fff;
 	}
 
 	&__social {
 		display: flex;
-		align-items: center;
-		gap: toRem(10);
+		gap: toRem(18);
 	}
 }
 
