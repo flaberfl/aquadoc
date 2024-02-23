@@ -211,7 +211,7 @@ body::after {
 	@include adaptiveValue("margin-bottom", 49, 30);
 
 	@include adaptiveValue("font-size", 24, 18);
-	color: $colorGrey;
+	// color: $colorGrey;
 	letter-spacing: 1.2px;
 	line-height: normal;
 
@@ -451,7 +451,7 @@ body::after {
 
 
 		@include adaptiveValue("font-size", 18, 14);
-		color: $colorGrey;
+		// color: $colorGrey;
 		line-height: 40px;
 		letter-spacing: 0.9px;
 
