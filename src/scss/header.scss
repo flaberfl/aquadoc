@@ -46,6 +46,8 @@
 	}
 
 	&__logo {
+		@include adaptiveValue("margin-right", 115, 20);
+
 		img {
 			max-width: 100%;
 			@include adaptiveValue("width", 235, 97);
@@ -56,39 +58,13 @@
 	}
 
 	&__menu {
-		@include adaptiveValue("margin-right", 62, 20);
+		@include adaptiveValue("margin-right", 200, 20);
 
 	}
 
-	&__contact {
+	&__contact {}
 
-		// svg {
-		// 	path {
-		// 		transition: all .3s ease .0s;
-		// 	}
-		// }
-
-		// @media (any-hover: hover) {
-		// 	&:hover {
-		// 		color: $colorHover;
-
-		// 		svg {
-		// 			path {
-		// 				fill: $colorHover;
-		// 			}
-		// 		}
-		// 	}
-		// }
-	}
-
-	&__phone {
-		color: #F5F5F5;
-		font-size: 28px;
-		font-style: normal;
-		font-weight: 600;
-		line-height: normal;
-		letter-spacing: 1.4px;
-	}
+	&__phone {}
 
 	&__time {
 		display: block;
@@ -117,8 +93,7 @@
 			// height: 100%;
 			top: 0;
 			left: 0;
-			// background-color: $bgColorSemi;
-			padding: toRem(128) toRem(15) toRem(25) toRem(28);
+
 			overflow: auto;
 
 			transform: scale(.7);
@@ -126,7 +101,6 @@
 			opacity: 0;
 			background-color: $bodyColor;
 			text-align: center;
-			box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.52);
 			transition: all 0.3s;
 
 			.menu-open & {
@@ -143,7 +117,7 @@
 
 	&__list {
 		display: flex;
-		@include adaptiveValue("column-gap", 65, 15, 0, $containerWidth, 992);
+		@include adaptiveValue("column-gap", 74, 15, 0, $containerWidth, 992);
 
 		// @media (max-width:$tablet) {
 		// 	padding-bottom: toRem(101);
@@ -161,37 +135,26 @@
 
 	&__item {
 		&:last-child {
-			display: flex;
-			align-items: center;
-			gap: toRem(7);
+			display: none;
+
+			@media (max-width:$mobile) {
+
+				display: flex;
+				align-items: center;
+				gap: toRem(7);
+			}
 		}
 	}
 
 
 	&__link {
 		font-size: toRem(16);
-		// color: $colorFont;
-		line-height: normal;
-		letter-spacing: 0.8px;
-		transition: color .3s ease 0s;
+		text-transform: uppercase;
 
-		@media (any-hover: hover) {
-			&:hover {
+		@media (any-hover: hover){
+			&:hover{
 				text-decoration: underline;
 			}
-		}
-
-		// @media (max-width:$tablet) {
-		// 	padding-bottom: toRem(10);
-
-		// 	border-bottom: 1px solid #BCC0CC;
-		// 	font-size: toRem(20);
-		// 	color: $mainColor;
-		// }
-
-		&:last-child {
-			display: flex;
-			align-items: center;
 		}
 	}
 }
