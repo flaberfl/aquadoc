@@ -7,9 +7,9 @@
 	left: 0;
 
 	&__wrapper {
-		position: fixed;
-		display: flex;
-		align-items: center;
+		// position: fixed;
+		// display: flex;
+		// align-items: center;
 
 		z-index: 29;
 		top: 0;
@@ -42,21 +42,21 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
+		justify-content: space-between;
 	}
 
 	&__logo {
-		@include adaptiveValue("margin-right", 115, 20);
 
 		img {
-			max-width: 100%;
+			// max-width: 100%;
 			@include adaptiveValue("width", 235, 97);
 			@include adaptiveValue("height", 102, 20);
 		}
 	}
 
 	&__menu {
-		@include adaptiveValue("margin-right", 200, 20);
-
+		// @include adaptiveValue("margin-right", 200, 20);
+		margin-right: toRem(20);
 	}
 
 	&__contact {
@@ -67,6 +67,14 @@
 
 	&__phone {}
 
+
+	&__left {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 115, 20);
+
+	}
+
 	&__right {
 		display: flex;
 		align-items: center;
@@ -75,6 +83,11 @@
 
 	&__time {
 		font-size: toRem(14);
+		font-weight: 300;
+
+		@media (max-width:$tablet){
+			display: none;
+		}
 	}
 
 	&__line {
@@ -86,6 +99,15 @@
 	&__social {
 		display: flex;
 		gap: toRem(18);
+
+		a {
+			position: relative;
+			z-index: 1000;
+		} 
+	}
+
+	&__text {
+		white-space: nowrap;
 	}
 }
 
@@ -98,7 +120,7 @@
 		@media (max-width:$tablet) {
 			position: fixed;
 			width: 100%;
-			// height: 100%;
+			height: 100%;
 			top: 0;
 			left: 0;
 
@@ -107,7 +129,7 @@
 			transform: scale(.7);
 			visibility: hidden;
 			opacity: 0;
-			background-color: $bodyColor;
+			background-color: #22242A;
 			text-align: center;
 			transition: all 0.3s;
 
@@ -125,7 +147,13 @@
 
 	&__list {
 		display: flex;
-		@include adaptiveValue("column-gap", 74, 15, 0, $containerWidth, 992);
+		align-items: center;
+		@include adaptiveValue("column-gap", 74, 15);
+
+		@media (max-width:$tablet){
+			flex-direction: column;
+			align-items: flex-start;
+		}
 
 		// @media (max-width:$tablet) {
 		// 	padding-bottom: toRem(101);
@@ -145,7 +173,7 @@
 		&:last-child {
 			display: none;
 
-			@media (max-width:$mobile) {
+			@media (max-width:$tablet) {
 
 				display: flex;
 				align-items: center;
@@ -159,11 +187,21 @@
 		font-size: toRem(16);
 		text-transform: uppercase;
 
-		@media (any-hover: hover){
-			&:hover{
+
+		@media (any-hover: hover) {
+			&:hover {
 				text-decoration: underline;
 			}
 		}
+
+		a {
+			white-space: pre;
+		}
+	}
+
+	&__lang {
+		font-size: toRem(16);
+		font-weight: 700;
 	}
 }
 
@@ -173,6 +211,7 @@
 
 .icon-menu {
 	display: none;
+	margin-left: toRem(20);
 
 	@media (max-width: $tablet) {
 		display: block;
