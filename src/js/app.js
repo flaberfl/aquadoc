@@ -30,7 +30,7 @@ import * as flsFunctions from "./files/functions.js";
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 /* (i) необхідно для коректного відображення webp із css */
-flsFunctions.isWebp();
+// flsFunctions.isWebp();
 /* Додавання класу touch для HTML якщо браузер мобільний */
 // flsFunctions.addTouchClass();
 /* Додавання loaded для HTML після повного завантаження сторінки */
@@ -47,14 +47,14 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сніппет (HTML): spollers
 */
-flsFunctions.spollers();
+// flsFunctions.spollers();
 
 /*
 Модуль "Таби"
 Документація: https://template.fls.guru/template-docs/modul-taby.html
 Сніппет (HTML): tabs
 */
-flsFunctions.tabs();
+// flsFunctions.tabs();
 
 /*
 Модуль "Показати ще"
@@ -89,7 +89,7 @@ flsFunctions.tabs();
 Документація: https://template.fls.guru/template-docs/funkcional-popup.html
 Сніппет (HTML): pl, pop
 */
-import './libs/popup.js'
+// import './libs/popup.js'
 
 /*
 Модуль паралаксу мишею
@@ -118,7 +118,7 @@ flsForms.formSubmit();
 flsForms.formQuantity();
 
 /* Модуль зіркового рейтингу */
-// flsForms.formRating();
+flsForms.formRating();
 
 /* Модуль роботи з select. */
 // import './libs/select.js'
@@ -162,7 +162,7 @@ flsForms.formQuantity();
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-import "./files/sliders.js";
+// import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модулі роботи з прокручуванням сторінки ========================================================================================================================================================================================================================================================
@@ -190,12 +190,12 @@ import './libs/watcher.js'
 // Модуль поекранної прокрутки
 // Документація: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
 // Сніппет(HTML):
-// import './libs/fullpage.js'
+import './libs/fullpage.js'
 
 // Модуль паралаксу
 // Документація: https://template.fls.guru/template-docs/paralaks-pri-skroli.html
 // Сніппет(HTML):
-import './libs/parallax.js'
+// import './libs/parallax.js'
 
 // Функції роботи скролом
 import * as flsScroll from "./files/scroll/scroll.js";
@@ -239,7 +239,7 @@ flsScroll.headerScroll();
 
 /* Динамічний адаптив */
 // Документація: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-import "./libs/dynamic_adapt.js";
+// import "./libs/dynamic_adapt.js";
 
 // Сортировка через MixItUp
 // import "./libs/mix.js";
