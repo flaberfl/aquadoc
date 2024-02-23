@@ -6,6 +6,6 @@
 
 	justify-content: center;
 	align-items: center;
-	@include adaptiveValue("height", 80, 60);
-	@include adaptiveValue("width", 250, 276);
+	// @include adaptiveValue("height", 80, 60);
+	// @include adaptiveValue("width", 250, 276);
 }
