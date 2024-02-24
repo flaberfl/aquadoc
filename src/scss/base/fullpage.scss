@@ -10,12 +10,15 @@ body {
 // Оболонка секцій
 [data-fp] {
 	min-height: 100vh;
+
 	.touch & {
 		min-height: calc(var(--vh, 1vh) * 100);
+
 		@media (max-width: $mobile) {
 			transition: height 0.2s;
 		}
 	}
+
 	.fp-init & {
 		// Для того щоб секції не перекривали буллети
 		z-index: 1;
@@ -31,6 +34,7 @@ body {
 	.fp-switching & {
 		touch-action: none;
 	}
+
 	.fp-init & {
 		position: absolute;
 		top: 0;
@@ -47,6 +51,7 @@ body {
 	.fp-init .cards-mode & {
 		transition: transform 0.7s cubic-bezier(0.55, 0.085, 0, 0.99) 0s;
 	}
+
 	.fp-init .fade-mode & {
 		transition:
 			opacity 0.5s ease-in-out 0s,
@@ -59,7 +64,7 @@ body {
 	position: fixed;
 	top: 50%;
 	transform: translate(0, -50%);
-	right: toRem(40);
+	left: toRem(40);
 	max-height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -67,10 +72,12 @@ body {
 	align-items: center;
 	justify-content: center;
 	z-index: 2;
-	gap: toRem(10);
+	gap: toRem(18);
+
 	@media (max-width: $pc) {
-		right: toRem(20);
+		left: toRem(20);
 	}
+
 	@media (max-width: $mobileSmall) {
 		top: auto;
 		bottom: toRem(20);
@@ -82,21 +89,22 @@ body {
 	// Булет
 	& .fp-bullet {
 		cursor: pointer;
-		width: toRem(20);
-		height: toRem(20);
-		flex: 0 0 toRem(20);
+		width: toRem(8);
+		height: toRem(8);
+		flex: 0 0 toRem(8);
 		border-radius: toRem(10);
-		background-color: #100c46;
-		box-shadow:
-			toRem(0) toRem(0) toRem(3) #6257fe,
-			0 0 toRem(30) rgba(255, 255, 255, 0.8);
-		border: toRem(1) solid #fff;
-		opacity: 0.6;
+		background-color: #32353D;
+		// box-shadow:
+		// 	toRem(0) toRem(0) toRem(3) #6257fe,
+		// 	0 0 toRem(30) rgba(255, 255, 255, 0.8);
+		// border: toRem(1) solid #fff;
+		opacity: 1;
 		transition:
-			transform 0.4s ease-in-out 0s,
+			// transform 0.4s ease-in-out 0s,
 			opacity 0.4s ease-in-out 0s,
 			background-color 0.4s ease-in-out 0s,
 			box-shadow 0.4s ease-in-out 0s;
+
 		@media (any-hover: hover) {
 			&:hover {
 				opacity: 1;
@@ -105,11 +113,32 @@ body {
 	}
 
 	& .fp-bullet-active {
+		position: relative;
 		opacity: 1;
-		background-color: #6257fe;
-		transform: translate3D(toRem(-5), toRem(-2), 0);
-		box-shadow:
-			toRem(5) toRem(2) toRem(3) #100c46,
-			0 0 toRem(30) rgba(255, 255, 255, 0.8);
+		width: toRem(18);
+		height: toRem(18);
+		flex: 0 0 toRem(18);
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// transform: translate3D(toRem(-5), toRem(-2), 0);
+		// box-shadow:
+		// 	toRem(5) toRem(2) toRem(3) #100c46,
+		// 	0 0 toRem(30) rgba(255, 255, 255, 0.8);
+
+		&::before {
+			content: '';
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			// right: 0;
+			// bottom: 0;
+			width: toRem(14);
+			height: toRem(14);
+			flex: 0 0 toRem(14);
+			border: 4px solid $bodyColor;
+			border-radius: 50%;
+		}
 	}
 }
