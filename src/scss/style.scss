@@ -76,7 +76,7 @@ body {
 	font-weight: 500;
 	background-color: $bodyColor;
 	opacity: 0;
-	letter-spacing: 5% important;
+	letter-spacing: 5% !important;
 	// @include adaptiveValue("font-size", 22, 16);
 	color: #fff;
 

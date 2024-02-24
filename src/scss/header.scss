@@ -43,20 +43,22 @@
 		align-items: center;
 		width: 100%;
 		justify-content: space-between;
+
+		@include adaptiveValue("padding-top", 6, 9, 0, 600, 345);
 	}
 
 	&__logo {
 
 		img {
-			// max-width: 100%;
 			@include adaptiveValue("width", 235, 97);
 			@include adaptiveValue("height", 102, 20);
 		}
 	}
 
 	&__menu {
-		// @include adaptiveValue("margin-right", 200, 20);
-		margin-right: toRem(20);
+		@media (min-width:$tablet) {
+			margin-right: toRem(20);
+		}
 	}
 
 	&__contact {
@@ -71,7 +73,7 @@
 	&__left {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 115, 20);
+		@include adaptiveValue("gap", 115, 20, 1, 1920, 768);
 
 	}
 
@@ -94,6 +96,10 @@
 		width: toRem(16);
 		height: toRem(1);
 		background-color: #fff;
+
+		@media (max-width: em(680)) {
+			display: none;
+		}
 	}
 
 	&__social {
@@ -108,19 +114,15 @@
 
 	&__text {
 		white-space: nowrap;
+
+		@media (max-width: em(680)) {
+			display: none;
+		}
 	}
 
 	&__lang {
 		font-size: toRem(16);
 		font-weight: 700;
-
-		// &_mobile {
-		// 	display: none;
-
-		// 	@media (max-width:$mobile) {
-		// 		display: block;
-		// 	}
-		// }
 	}
 }
 
@@ -162,6 +164,7 @@
 		display: flex;
 		align-items: center;
 		@include adaptiveValue("column-gap", 74, 15);
+		row-gap: toRem(30);
 
 		@media (max-width:$tablet) {
 			flex-direction: column;
@@ -169,35 +172,25 @@
 
 			padding: toRem(20);
 		}
-
-		// @media (max-width:$tablet) {
-		// 	padding-bottom: toRem(101);
-		// 	flex: 1 1 auto;
-
-		// 	font-size: toRem(0);
-		// 	flex-direction: column;
-		// 	row-gap: toRem(36);
-		// }
-
-		// @media (max-width: em(580)) {
-		// 	border-bottom: 1px solid #BCC0CC;
-		// }
 	}
 
 	&__item {
 
 		&:first-child {
-
 			@media (min-width:$mobile) {
 				display: none;
-
 			}
-
-			// @media (max-width:$mobile) {
-			// 	display: block;
-			// }
 		}
 
+		&:nth-child(2) {
+			@media (max-width:$tablet) {
+				margin-top: toRem(127);
+			}
+
+			@media (max-width:$mobile) {
+				margin-top: toRem(77);
+			}
+		}
 
 		&:last-child {
 			display: none;
@@ -222,10 +215,10 @@
 		}
 	}
 
-
 	&__link {
 		font-size: toRem(16);
 		text-transform: uppercase;
+		white-space: pre;
 
 
 		@media (any-hover: hover) {
@@ -234,9 +227,7 @@
 			}
 		}
 
-		a {
-			white-space: pre;
-		}
+		a {}
 	}
 }
 
