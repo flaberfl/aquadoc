@@ -1,18 +1,68 @@
 .intro {
+  padding-top: toRem(90);
+
   /* .intro__container */
   &__container {
     display: flex;
   }
+
   /* .intro__content */
   &__content {
     flex: 0 1 64%;
   }
+
   /* .intro__title */
-  &__title {
-  }
+  &__title {}
+
   /* .intro__media */
   &__media {
+    position: relative;
+    flex: 0 1 36%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('@img/intro/intro-photo.png') 0 0 no-repeat;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      // object-fit: cover;
+      // width: 100%;
+      // height: 100%;
+      background-blend-mode: lighten;
+    }
+
   }
 }
-.title-h1 {
+
+.title-h1 {}
+
+.ellipse-center {
+  width: 245px;
+  height: 245px;
+
+  filter: blur(99px);
+  background: rgba(0, 174, 248, 0.47);
+}
+
+.ellipse-top {
+  width: 384px;
+  height: 384px;
+
+  filter: blur(171px);
+  background: rgba(0, 174, 248, 0.19);
+}
+
+.ellipse-bottom {
+  width: 384px;
+  height: 384px;
+  filter: blur(171px);
+  background: rgba(0, 174, 248, 0.12);
+}
+
+.intro__bg-img {
+  box-shadow: inset 0px 0px 84px 51px rgb(25, 26, 31);
+  opacity: .24;
+
 }
