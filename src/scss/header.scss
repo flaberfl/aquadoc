@@ -80,7 +80,11 @@
 	&__right {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 90, 15);
+		@include adaptiveValue("gap", 90, 15, 3, 1920, 992);
+
+		@media (max-width:$tablet){
+			gap: toRem(40);
+		}
 	}
 
 	&__time {

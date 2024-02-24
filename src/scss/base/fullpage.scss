@@ -141,4 +141,8 @@ body {
 			border-radius: 50%;
 		}
 	}
+
+	@media (max-width:$tablet){
+		display: none;
+	}
 }
