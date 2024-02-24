@@ -85,7 +85,7 @@
 		font-size: toRem(14);
 		font-weight: 300;
 
-		@media (max-width:$tablet){
+		@media (max-width:$tablet) {
 			display: none;
 		}
 	}
@@ -103,11 +103,24 @@
 		a {
 			position: relative;
 			z-index: 1000;
-		} 
+		}
 	}
 
 	&__text {
 		white-space: nowrap;
+	}
+
+	&__lang {
+		font-size: toRem(16);
+		font-weight: 700;
+
+		// &_mobile {
+		// 	display: none;
+
+		// 	@media (max-width:$mobile) {
+		// 		display: block;
+		// 	}
+		// }
 	}
 }
 
@@ -150,9 +163,11 @@
 		align-items: center;
 		@include adaptiveValue("column-gap", 74, 15);
 
-		@media (max-width:$tablet){
+		@media (max-width:$tablet) {
 			flex-direction: column;
 			align-items: flex-start;
+
+			padding: toRem(20);
 		}
 
 		// @media (max-width:$tablet) {
@@ -170,14 +185,39 @@
 	}
 
 	&__item {
+
+		&:first-child {
+
+			@media (min-width:$mobile) {
+				display: none;
+
+			}
+
+			// @media (max-width:$mobile) {
+			// 	display: block;
+			// }
+		}
+
+
 		&:last-child {
 			display: none;
 
-			@media (max-width:$tablet) {
+			.menu__link_mobile {
+				font-size: toRem(27);
+				font-weight: 900;
+				line-height: 28px;
+			}
 
+			span {
+				align-self: start;
+				font-size: toRem(16);
+				font-weight: 500;
+			}
+
+			@media (max-width:$tablet) {
 				display: flex;
-				align-items: center;
-				gap: toRem(7);
+				gap: toRem(15);
+				flex-direction: column;
 			}
 		}
 	}
@@ -197,11 +237,6 @@
 		a {
 			white-space: pre;
 		}
-	}
-
-	&__lang {
-		font-size: toRem(16);
-		font-weight: 700;
 	}
 }
 
