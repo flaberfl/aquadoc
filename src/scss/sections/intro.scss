@@ -24,6 +24,7 @@
   /* .intro__container */
   &__container {
     display: flex;
+    // position: relative;
   }
 
   /* .intro__content */
@@ -47,17 +48,31 @@
     }
 
   }
+
+  // &__decor {
+  //   position: absolute;
+  //   right: 0;
+  // }
 }
 
-.ellipse-center {
-  width: 245px;
-  height: 245px;
-
-  filter: blur(99px);
-  background: rgba(0, 174, 248, 0.47);
+.ellipse {
+  position: absolute;
 }
+
+// .ellipse-center {
+//   width: 245px;
+//   height: 245px;
+//   right: 0;
+//   top: 50%;
+//   transform: translate(0px, -50%);
+
+//   filter: blur(99px);
+//   background: rgba(0, 174, 248, 0.47);
+// }
 
 .ellipse-top {
+  right: 0;
+  top: 0;
   width: 384px;
   height: 384px;
 
@@ -66,14 +81,11 @@
 }
 
 .ellipse-bottom {
+  bottom: 0;
+  right: 0;
+
   width: 384px;
   height: 384px;
   filter: blur(171px);
   background: rgba(0, 174, 248, 0.12);
-}
-
-.intro__bg-img {
-  box-shadow: inset 0px 0px 84px 51px rgb(25, 26, 31);
-  opacity: .24;
-
 }
