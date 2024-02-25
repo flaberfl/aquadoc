@@ -20,10 +20,11 @@
 
 	@include adaptiveValue("line-height", 70, 28);
 
+	white-space: wrap;
 
 
 	@media (min-width:em(1366)) {
-		white-space: pre;
+		white-space: nowrap;
 	}
 
 	// @media (max-width:$tablet) {
