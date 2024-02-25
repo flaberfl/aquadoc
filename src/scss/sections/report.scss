@@ -1,0 +1,40 @@
+.report {
+
+  /* .report__container */
+  &__container {
+    display: grid;
+    grid-template-columns: auto 57%;
+    gap: toRem(20);
+  }
+
+  /* .report__media */
+  &__media {}
+
+  /* .report__content */
+  &__content {}
+
+  /* .report__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 66, 41);
+  }
+
+  /* .report__subtitle */
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 50, 38);
+  }
+
+  /* .report__items */
+  &__items {
+    display: grid;
+    gap: toRem(55);
+    @include adaptiveValue("gap", 55, 25);
+  }
+
+  /* .report__item */
+  &__item {
+    display: flex;
+    align-items: center;
+
+    @include adaptiveValue("gap", 24, 20);
+  }
+}

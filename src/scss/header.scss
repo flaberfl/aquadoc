@@ -1,10 +1,12 @@
 //====================================================================================================
 .header {
-	position: absolute;
+	// position: absolute;
+	// position: static;
 	z-index: 600;
 	width: 100%;
 	top: 0;
 	left: 0;
+	// background: $bodyColor;
 
 	&__wrapper {
 		top: 0;

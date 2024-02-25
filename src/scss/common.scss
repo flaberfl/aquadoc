@@ -32,6 +32,19 @@
 	// }
 }
 
+.subtitle-h3 {
+	@include adaptiveValue("font-size", 24, 20);
+	color: $subColor;
+	font-weight: 400;
+	line-height: 34px;
+	letter-spacing: 1.2px;
+
+	span {
+		color: #fff;
+		font-weight: 500;
+	}
+}
+
 
 // Анимации
 
