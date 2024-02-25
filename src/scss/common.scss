@@ -5,21 +5,30 @@
 	@include adaptiveValue("font-size", 55, 27);
 
 	font-weight: 700;
-	line-height: 70px;
-	letter-spacing: 5%;
+	// line-height: 70px;
+	letter-spacing: 2.75px;
 
+	@include adaptiveValue("line-height", 70, 37);
 
 	@media (max-width:$tablet) {
-		line-height: 37px;
+		// line-height: 37px;
 	}
 }
 
 .title-h1 span {
 	@include adaptiveValue("font-size", 38, 18);
 
-	@media (max-width:$tablet) {
-		line-height: 28px;
+	@include adaptiveValue("line-height", 70, 28);
+
+
+
+	@media (min-width:em(1366)) {
+		white-space: pre;
 	}
+
+	// @media (max-width:$tablet) {
+	// 	line-height: 28px;
+	// }
 }
 
 
