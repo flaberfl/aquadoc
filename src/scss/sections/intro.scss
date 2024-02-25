@@ -1,6 +1,15 @@
 .intro {
   position: relative;
-  padding-top: toRem(90);
+  padding-top: toRem(88);
+
+  @media (max-width:$tablet) {
+    padding-top: toRem(160);
+  }
+
+  @media (max-width:$mobileSmall) {
+    padding-top: toRem(110);
+  }
+
 
   &__bg {
     position: absolute;
@@ -12,22 +21,18 @@
     opacity: .24;
 
     object-fit: cover;
-    bottom: 0;
+
+
+    @media (max-width:$tablet) {
+      transform: translate(0, -1%);
+
+    }
 
   }
-
-  @media (max-width:$mobileSmall) {
-    padding-top: toRem(60);
-  }
-
-  /* .intro__container */
-  &__container {}
 
   &__body {
-    // display: flex;
     display: grid;
     grid-template-columns: 64% 1fr;
-    padding-top: toRem(60);
 
     @media (max-width: em(1366)) {
       align-items: center;
@@ -36,49 +41,35 @@
     @media (max-width:$tablet) {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
-
     }
   }
 
   /* .intro__content */
   &__content {
-    // flex: 0 1 64%;
-    // padding-top: toRem(211);
     @include adaptiveValue("padding-top", 211, 130, 0, 1920, 1366);
     margin-bottom: toRem(40);
 
     @media (max-width: em(1366)) {
       padding-top: 0;
     }
-
-    @media (max-width:$mobile) {
-      align-self: start;
-    }
   }
 
   /* .intro__title */
   &__title {
-    // white-space: nowrap;
-
-    @media (max-width:$mobileSmall){
-       letter-spacing: 0.27px; 
+    @media (max-width:$mobileSmall) {
+      letter-spacing: 0.27px;
     }
-
 
     span {
       display: block;
       @include adaptiveValue("margin-bottom", 35, 10);
 
       letter-spacing: 1.9px;
-
-
     }
   }
 
   /* .intro__media */
   &__media {
-    // position: relative;
-    // flex: 1 1 36%;
     background-color: $bodyColor;
 
     @media (min-width:em(1480)) {
@@ -88,18 +79,18 @@
     img {
       mix-blend-mode: lighten;
 
+      @include adaptiveValue("width", 555, 253);
+
       @media (max-width:em(1480)) {
         max-width: 100%;
       }
     }
-
   }
 
   /* .intro__footer */
   &__footer {
     display: flex;
     margin-top: toRem(-164);
-    // @include adaptiveValue("margin-top", -164, -50);
     justify-content: space-between;
 
     @media (max-width: em(1366)) {
@@ -111,6 +102,10 @@
       row-gap: toRem(36);
       justify-content: center;
       align-items: center;
+    }
+
+    @media (max-width:$mobile) {
+      margin-top: toRem(-70);
     }
   }
 
