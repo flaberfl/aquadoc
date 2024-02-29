@@ -84,3 +84,14 @@
 
   }
 }
+
+.tooltip {
+  background: white;
+  max-width: 240px;
+  color: #191A1F;
+  font-weight: 600;
+  font-size: toRem(14);
+  font-family: Roboto;
+  letter-spacing: .7;
+  line-height: 15px;
+}
