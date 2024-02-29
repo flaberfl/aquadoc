@@ -9,7 +9,7 @@ body {
 
 // Оболонка секцій
 [data-fp] {
-	min-height: 100vh;
+	// min-height: 100vh;
 
 	.touch & {
 		min-height: calc(var(--vh, 1vh) * 100);
