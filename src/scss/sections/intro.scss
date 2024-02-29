@@ -2,10 +2,15 @@
   position: relative;
   // padding-top: toRem(88); 
 
+  @media (min-width:em(1280)) {
+    margin-top: -26px;
+  }
+
 
   @media (max-width:$tablet) {
     // padding-top: toRem(160);
     padding-top: toRem(50);
+    padding-bottom: toRem(50);
   }
 
   // @media (max-width:$mobileSmall) {
@@ -95,7 +100,7 @@
     margin-top: toRem(-164);
     justify-content: space-between;
 
-    @media (max-width: em(1366)) {
+    @media (max-width:em(1480)) {
       margin-top: toRem(-90);
     }
 
@@ -104,9 +109,11 @@
       row-gap: toRem(36);
       justify-content: center;
       align-items: center;
+      // margin-top: toRem(-30);
+      @include adaptiveValue("margin-top", -30, 100);
     }
 
-    @media (max-width:$mobile) {
+    @media (max-width:$tablet) {
       margin-top: toRem(-70);
     }
   }

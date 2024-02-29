@@ -7,23 +7,28 @@
 	top: 0;
 	left: 0;
 	// background: $bodyColor;
+	// border: 1px solid red;
 
 	&__wrapper {
+
+		// position: fixed;
+		// display: flex;
+		// align-items: center;
+
 		top: 0;
 		left: 0;
 		width: 100%;
 		padding: toRem(5) 0;
-		@include adaptiveValue("height", 140, 60);
-		// transition: transform 0.37s ease-in-out, min-height 0.25s ease-in-out,
-		// 	background-color 0.25s ease-in-out;
+		// height: 50px;
+		// @include adaptiveValue("height", 100, 50);
 		transition: all 0.4s;
-		z-index: 29;
+		z-index: 30;
 
 		._header-scroll & {
 			transform: translateY(-100%);
 			background-color: rgba(0, 0, 0, 0.8);
 
-			@include adaptiveValue("height", 100, 50);
+			// @include adaptiveValue("height", 100, 50);
 
 		}
 
