@@ -70,16 +70,16 @@
   /* .report__item */
   &__item {
     display: flex;
-    align-items: center;
+    // align-items: center;
     @include adaptiveValue("gap", 24, 20);
   }
 
   &__button {
+    justify-self: center;
 
     @media (min-width:$tablet) {
       @include adaptiveValue("margin-top", 89, 0);
       // margin-top: toRem(89);
-      justify-self: center;
     }
 
   }
