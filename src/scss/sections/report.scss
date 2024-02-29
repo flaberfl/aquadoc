@@ -1,17 +1,54 @@
 .report {
+  background: url('@img/back-main.png') 0 0 no-repeat;
+  // padding-top: toRem(60);
+  @include adaptiveValue("padding-top", 60, 30);
+  // @include adaptiveValue("padding-bottom", 60, 60);
+  padding-bottom: toRem(60);
+
 
   /* .report__container */
   &__container {
     display: grid;
-    grid-template-columns: auto 57%;
-    gap: toRem(20);
+    grid-template-columns: 1fr 57%;
+    column-gap: toRem(20);
+
+    @media (max-width:$tablet) {
+      grid-template-columns: auto;
+    }
   }
 
   /* .report__media */
-  &__media {}
+  &__media {
+    align-self: center;
+    justify-self: center;
+
+    @media (max-width:$tablet) {
+      grid-row-start: 2;
+
+    }
+
+    img {
+      max-width: 100%;
+
+      @media (max-width:$tablet) {
+        /* Убираем погрешность расположения из-за тени на картинке */
+        transform: translate(8.5%, 0);
+        // width: 80%;
+      }
+
+      // @media (min-width:em(600)) and (max-width:$tablet) {
+      //   transform: translate(13.5%, 0);
+      //   width: 80%;
+      // }
+    }
+  }
 
   /* .report__content */
-  &__content {}
+  &__content {
+    @media (max-width:$tablet) {
+      margin-bottom: toRem(45);
+    }
+  }
 
   /* .report__title */
   &__title {
@@ -26,7 +63,7 @@
   /* .report__items */
   &__items {
     display: grid;
-    gap: toRem(55);
+    // gap: toRem(55);
     @include adaptiveValue("gap", 55, 25);
   }
 
@@ -35,15 +72,15 @@
     display: flex;
     align-items: center;
     @include adaptiveValue("gap", 24, 20);
-
-
-    // span {
-    //   font-weight: 600;
-    // }
-
   }
 
   &__button {
-    @include adaptiveValue("margin-top", 89, 56);
+
+    @media (min-width:$tablet) {
+      @include adaptiveValue("margin-top", 89, 0);
+      // margin-top: toRem(89);
+      justify-self: center;
+    }
+
   }
 }

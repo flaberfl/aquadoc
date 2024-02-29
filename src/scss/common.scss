@@ -58,6 +58,38 @@
 }
 
 
+
+// Декоративная граница секции
+
+.section-line_left {
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: url('@img/icons/sec-line.svg') 0 0 no-repeat;
+		@include adaptiveValue("width", 592, 360);
+		height: 73px;
+	}
+}
+
+.section-line_right {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: url('@img/icons/sec-line-r.svg') 0 0 no-repeat;
+		@include adaptiveValue("width", 592, 360);
+		height: 73px;
+	}
+}
+
+
 // Анимации
 
 

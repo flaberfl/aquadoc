@@ -9,6 +9,8 @@ body {
 
 // Оболонка секцій
 [data-fp] {
+	// min-height: 100vh;
+
 	@media (min-width:$tablet) {
 		min-height: 100vh;
 	}
