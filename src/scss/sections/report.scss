@@ -34,7 +34,16 @@
   &__item {
     display: flex;
     align-items: center;
-
     @include adaptiveValue("gap", 24, 20);
+
+
+    // span {
+    //   font-weight: 600;
+    // }
+
+  }
+
+  &__button {
+    @include adaptiveValue("margin-top", 89, 56);
   }
 }

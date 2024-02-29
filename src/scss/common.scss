@@ -45,6 +45,18 @@
 	}
 }
 
+.text-18 {
+	@include adaptiveValue("font-size", 18, 16);
+	color: $subColor;
+	line-height: 28px;
+	letter-spacing: .9px;
+
+	span {
+		font-weight: 600;
+		color: #fff;
+	}
+}
+
 
 // Анимации
 

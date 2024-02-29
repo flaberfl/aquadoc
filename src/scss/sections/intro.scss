@@ -1,6 +1,7 @@
 .intro {
   position: relative;
-  padding-top: toRem(88);
+  // padding-top: toRem(88);
+  // margin-top: toRem(-46);
 
   @media (max-width:$tablet) {
     padding-top: toRem(160);
