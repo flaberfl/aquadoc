@@ -1,7 +1,8 @@
 .report {
   background: url('@img/back-main.png') 0 0 no-repeat;
   // padding-top: toRem(60);
-  @include adaptiveValue("padding-top", 60, 30);
+  // @include adaptiveValue("padding-top", 60, 30);
+  padding-top: toRem(30);
   // @include adaptiveValue("padding-bottom", 60, 60);
   padding-bottom: toRem(60);
 
@@ -33,7 +34,6 @@
       @media (max-width:$tablet) {
         /* Убираем погрешность расположения из-за тени на картинке */
         transform: translate(8.5%, 0);
-        // width: 80%;
       }
 
       // @media (min-width:em(600)) and (max-width:$tablet) {
