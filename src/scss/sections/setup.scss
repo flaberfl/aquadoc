@@ -1,0 +1,135 @@
+.setup {
+  background: url('@img/back-main.png') center center no-repeat;
+
+  /* .setup__container */
+  &__container {
+    // display: flex;
+    // justify-content: center;
+
+  }
+
+  /* .setup__title */
+  &__title {
+    margin-bottom: toRem(20);
+
+    text-align: center;
+  }
+
+  /* .setup__body */
+  &__media {
+    position: relative;
+    max-width: toRem(516);
+    margin: 0 auto;
+  }
+}
+
+.title-h2 {}
+
+
+
+
+.line-tooltip {
+  display: inline-block;
+  position: absolute;
+  border-bottom: 1px solid #fff;
+  padding-bottom: toRem(8);
+  max-width: toRem(308);
+
+  font-size: toRem(18);
+  letter-spacing: .9px;
+  line-height: 24px;
+
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: #fff;
+    transform-origin: 0 0;
+
+    z-index: 5;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: url('@img/icons/link-point.svg') 0 0 no-repeat;
+    width: toRem(45);
+    height: toRem(45);
+
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  &_1 {
+    left: -10.3%;
+    top: 8.9%;
+
+    &::before {
+      bottom: -119px;
+      right: 0;
+      height: toRem(118);
+      transform: rotate(307deg);
+    }
+
+    &::after {
+      right: -135px;
+      bottom: -107px;
+    }
+  }
+
+  &_1 {
+    left: -10.3%;
+    top: 8.6%;
+
+    &::before {
+      bottom: -119px;
+      right: -1px;
+      height: toRem(118);
+      transform: rotate(307deg);
+    }
+
+    &::after {
+      right: -135px;
+      bottom: -107px;
+    }
+  }
+
+  &_2 {
+    right: -46.1%;
+    top: 18.4%;
+
+    &::before {
+      bottom: -194px;
+      left: 0;
+      height: toRem(194);
+      transform: rotate(116deg);
+    }
+
+    &::after {
+      left: -218px;
+      top: -62px;
+    }
+  }
+
+  &_3 {
+    max-width: toRem(342);
+    left: -47%;
+    top: 30.3%;
+
+    text-align: right;
+
+    &::before {
+      bottom: -119px;
+      right: 0;
+      height: toRem(118);
+      transform: rotate(307deg);
+    }
+
+    &::after {
+      right: -135px;
+      bottom: -107px;
+    }
+  }
+}
