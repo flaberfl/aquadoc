@@ -2,11 +2,7 @@
   background: url('@img/back-main.png') center center no-repeat;
 
   /* .setup__container */
-  &__container {
-    // display: flex;
-    // justify-content: center;
-
-  }
+  &__container {}
 
   /* .setup__title */
   &__title {
@@ -31,7 +27,7 @@
   padding-bottom: toRem(8);
   max-width: toRem(308);
 
-  font-size: toRem(18);
+  @include adaptiveValue("font-size", 18, 14);
   letter-spacing: .9px;
   line-height: 24px;
 
