@@ -23,10 +23,6 @@
   }
 }
 
-.title-h2 {}
-
-
-
 
 .line-tooltip {
   display: inline-block;
@@ -130,6 +126,62 @@
     &::after {
       right: -135px;
       bottom: -107px;
+    }
+  }
+
+  &_4 {
+    right: -46.7%;
+    top: 35.4%;
+
+    max-width: toRem(300);
+
+    &::before {
+      bottom: -126px;
+      left: 0;
+      height: toRem(126);
+      transform: rotate(49deg);
+    }
+
+    &::after {
+      right: 390px;
+      bottom: -120px;
+    }
+  }
+
+  &_5 {
+    left: -38.6%;
+    bottom: 37.5%;
+    max-width: 300px;
+
+    text-align: right;
+
+    &::before {
+      bottom: -119px;
+      right: 0;
+      height: toRem(118);
+      transform: rotate(307deg);
+    }
+
+    &::after {
+      right: -135px;
+      bottom: -107px;
+    }
+  }
+
+  &_6 {
+    right: -47%;
+    top: 58%;
+
+    &::before {
+      bottom: -163px;
+      left: 0;
+      height: toRem(163);
+      transform: rotate(69deg);
+    }
+
+    &::after {
+      left: -193px;
+      bottom: -90px;
     }
   }
 }
