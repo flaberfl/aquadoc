@@ -179,6 +179,7 @@
 
     @media (max-width: em(1100)) {
       bottom: 39.5%;
+      left: -46.6%;
     }
 
     @media (min-width:em(1101)) {
@@ -192,11 +193,9 @@
       transform: rotate(307deg);
 
       @media (max-width: em(1100)) {
-        transform: rotate(-29deg);
-
-        bottom: -194px;
-        height: 193px;
-
+        transform: rotate(-56.4deg);
+        bottom: -141px;
+        height: 140px;
       }
     }
 
@@ -205,8 +204,8 @@
       bottom: -107px;
 
       @media (max-width: em(1100)) {
-        right: -124px;
-        bottom: -213px;
+        right: -158px;
+        bottom: -113px;
       }
     }
   }
