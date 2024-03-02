@@ -178,7 +178,7 @@
     max-width: 300px;
 
     @media (max-width: em(1100)) {
-      bottom: 54.5%;
+      bottom: 39.5%;
     }
 
     @media (min-width:em(1101)) {
@@ -215,16 +215,29 @@
     right: -47%;
     top: 58%;
 
+    @media (max-width: em(1100)) {
+      left: -47%;
+      top: 38%;
+    }
+
     &::before {
       bottom: -163px;
       left: 0;
       height: toRem(163);
       transform: rotate(69deg);
+
+      @media (max-width: em(1100)) {
+        left: auto;
+        right: 0;
+        bottom: -251px;
+        height: toRem(250);
+        transform: rotate(-45deg);
+      }
     }
 
     &::after {
-      left: -193px;
-      bottom: -90px;
+      left: 479px;
+      bottom: -213px;
     }
   }
 }
