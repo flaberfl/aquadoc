@@ -15,7 +15,24 @@
   &__media {
     position: relative;
     max-width: toRem(516);
-    margin: 0 auto;
+    // display: grid;
+
+    @media (min-width:em(1101)) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: em(1100)) {
+      margin-left: auto;
+      transform: translate(-11%, 0px);
+    }
+
+    @media (max-width:$mobile) {
+      // transform: translate(20%, 0px);
+    }
+
+    img {
+      max-width: 100%;
+    }
   }
 }
 
@@ -54,22 +71,6 @@
     cursor: pointer;
   }
 
-  &_1 {
-    left: -10.3%;
-    top: 8.9%;
-
-    &::before {
-      bottom: -119px;
-      right: 0;
-      height: toRem(118);
-      transform: rotate(307deg);
-    }
-
-    &::after {
-      right: -135px;
-      bottom: -107px;
-    }
-  }
 
   &_1 {
     left: -10.3%;
@@ -92,17 +93,38 @@
     right: -46.1%;
     top: 18.4%;
 
+
+    @media (max-width: em(1100)) {
+      // right: auto;
+      left: -32%;
+      top: -1.6%;
+    }
+
     &::before {
       bottom: -194px;
       left: 0;
       height: toRem(194);
       transform: rotate(116deg);
+
+      @media (max-width: em(1100)) {
+        left: auto;
+        right: 0;
+        transform: rotate(-77deg);
+        height: 100px;
+        bottom: -101px;
+      }
     }
 
     &::after {
       left: -218px;
       top: -62px;
+
+      @media (max-width: em(1100)) {
+        left: 402px;
+        top: 63px;
+      }
     }
+
   }
 
   &_3 {
@@ -110,7 +132,9 @@
     left: -47%;
     top: 30.3%;
 
-    text-align: right;
+    @media (min-width:em(1101)) {
+      text-align: right;
+    }
 
     &::before {
       bottom: -119px;
@@ -128,7 +152,6 @@
   &_4 {
     right: -46.7%;
     top: 35.4%;
-
     max-width: toRem(300);
 
     &::before {
@@ -149,7 +172,9 @@
     bottom: 37.5%;
     max-width: 300px;
 
-    text-align: right;
+    @media (min-width:em(1101)) {
+      text-align: right;
+    }
 
     &::before {
       bottom: -119px;
