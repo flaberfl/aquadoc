@@ -24,11 +24,15 @@
 
     @media (max-width: em(1100)) {
       margin-left: auto;
-      transform: translate(-20%, 0px);
+      transform: translate(-15%, 0px);
+    }
+
+    @media (max-width:$tablet) {
+      transform: translate(10%, 0px);
     }
 
     @media (max-width:$mobile) {
-      // transform: translate(20%, 0px);
+      transform: translate(21%, 0px);
     }
 
     img {
@@ -36,7 +40,6 @@
     }
   }
 }
-
 
 .line-tooltip {
   display: inline-block;
@@ -48,7 +51,6 @@
   @include adaptiveValue("font-size", 18, 14);
   letter-spacing: .9px;
   line-height: 24px;
-
 
   &::before {
     content: "";
@@ -71,7 +73,6 @@
     z-index: 10;
     cursor: pointer;
   }
-
 
   &_1 {
     left: -10.3%;
