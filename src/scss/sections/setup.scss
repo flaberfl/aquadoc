@@ -23,7 +23,7 @@
 
     @media (max-width: em(1100)) {
       margin-left: auto;
-      transform: translate(-11%, 0px);
+      transform: translate(-20%, 0px);
     }
 
     @media (max-width:$mobile) {
@@ -132,6 +132,11 @@
     left: -47%;
     top: 30.3%;
 
+    @media (max-width: em(1100)) {
+      left: -47%;
+      top: 21.3%;
+    }
+
     @media (min-width:em(1101)) {
       text-align: right;
     }
@@ -172,6 +177,10 @@
     bottom: 37.5%;
     max-width: 300px;
 
+    @media (max-width: em(1100)) {
+      bottom: 54.5%;
+    }
+
     @media (min-width:em(1101)) {
       text-align: right;
     }
@@ -181,11 +190,24 @@
       right: 0;
       height: toRem(118);
       transform: rotate(307deg);
+
+      @media (max-width: em(1100)) {
+        transform: rotate(-29deg);
+
+        bottom: -194px;
+        height: 193px;
+
+      }
     }
 
     &::after {
       right: -135px;
       bottom: -107px;
+
+      @media (max-width: em(1100)) {
+        right: -124px;
+        bottom: -213px;
+      }
     }
   }
 
