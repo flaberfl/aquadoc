@@ -1,5 +1,5 @@
 .report {
-  background: url('@img/back-main.png') 0 0 no-repeat;
+  background: url('@img/back-main.png') left center no-repeat;
   // padding-top: toRem(60);
   // @include adaptiveValue("padding-top", 60, 30);
   padding-top: toRem(30);
@@ -24,8 +24,8 @@
     justify-self: center;
 
     @media (max-width:$tablet) {
+      overflow: hidden;
       grid-row-start: 2;
-
     }
 
     img {
