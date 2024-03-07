@@ -34,11 +34,14 @@
 
   /* .settings__name */
   &__name {
-    flex: 0 1 42%;
+    flex: 0 1 44%;
   }
 
   /* .settings__value */
-  &__value {}
+  &__value {
+    flex: 0 1 56%;
+
+  }
 }
 
 .title-h2 {}
