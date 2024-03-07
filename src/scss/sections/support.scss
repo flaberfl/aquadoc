@@ -1,4 +1,5 @@
 .support {
+  padding-top: toRem(77);
 
   background: url('@img/back-main.png') no-repeat;
 
@@ -9,12 +10,17 @@
   }
 
   /* .support__media */
-  &__media {}
+  &__media {
+    position: relative;
+  }
 
   /* .support__social-blok */
   &__social-blok {
     display: grid;
     row-gap: 22px;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   &__social-row {
@@ -107,30 +113,31 @@
         }
       }
     }
-
-    /* .support__image */
-    &__image {}
-
-    /* .support__content */
-    &__content {}
-
-    /* .support__top */
-    &__top {}
-
-    /* .support__title */
-    &__title {}
-
-    /* .support__subtitle.subtitle-h3 */
-    &__subtitle.subtitle-h3 {}
-
-    /* .support__bottom */
-    &__bottom {}
-
-    /* .support__links */
-    &__links {}
-
-    /* .support__link */
-    &__link {}
   }
 
+  /* .support__image */
+  &__image {
+    margin-left: toRem(40);
+  }
+
+  /* .support__content */
+  &__content {}
+
+  /* .support__top */
+  &__top {}
+
+  /* .support__title */
+  &__title {}
+
+  /* .support__subtitle.subtitle-h3 */
+  &__subtitle.subtitle-h3 {}
+
+  /* .support__bottom */
+  &__bottom {}
+
+  /* .support__links */
+  &__links {}
+
+  /* .support__link */
+  &__link {}
 }
