@@ -26,7 +26,7 @@
   &__item {
     display: flex;
     // align-items: flex-start;
-    gap: 24px;
+    gap: 20px;
 
     font-size: toRem(18);
     font-weight: 300;
@@ -39,12 +39,12 @@
     flex: 0 1 43%;
     overflow: hidden;
     white-space: nowrap;
-
+    display: flex;
 
     &::after {
       content: "....................................................................................";
       margin-top: -10px;
-
+      margin-left: 20px;
       font-size: toRem(35);
       white-space: nowrap;
       overflow: hidden;
