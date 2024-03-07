@@ -1,0 +1,46 @@
+.settings {
+
+  /* .settings__container */
+  &__container {}
+
+  /* .settings__title */
+  &__title {
+    margin-bottom: toRem(14);
+  }
+
+  /* .settings__subtitle */
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 13, 22);
+  }
+
+  /* .settings__list */
+  &__list {
+    padding: toRem(20);
+    display: grid;
+    row-gap: 14px;
+
+    border: 1px solid rgba($color: #ffffff, $alpha: .16);
+  }
+
+  /* .settings__item */
+  &__item {
+    display: flex;
+
+    font-size: toRem(18);
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: .9px;
+  }
+
+  /* .settings__name */
+  &__name {
+    flex: 0 1 42%;
+  }
+
+  /* .settings__value */
+  &__value {}
+}
+
+.title-h2 {}
+
+.subtitle-h3 {}
