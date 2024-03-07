@@ -4,11 +4,21 @@
   padding-bottom: toRem(80);
 
   /* .properties__container */
-  &__container {}
+  &__container {
+    // padding-left: toRem(300);
+    // padding-right: toRem(300);
+  }
 
   /* .properties__title */
   &__title {
     @include adaptiveValue("margin-bottom", 88, 30);
+  }
+
+  &__body {
+    @media (max-width:$tablet) {
+      @include adaptiveValue("padding-left", 160, 0);
+      @include adaptiveValue("padding-right", 160, 0);
+    }
   }
 
   /* .properties__block */
@@ -51,7 +61,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: toRem(20);
+    // padding: toRem(20);
+    padding: toRem(53) toRem(20) toRem(35);
   }
 
   /* .properties__items */
