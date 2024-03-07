@@ -182,6 +182,11 @@
 	line-height: 30px;
 }
 
+.title-svg {
+	@include adaptiveValue("width", 245, 95);
+	@include adaptiveValue("height", 49, 19);
+}
+
 
 
 // Анимации

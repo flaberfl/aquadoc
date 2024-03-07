@@ -1,17 +1,11 @@
 .settings {
-
+@include adaptiveValue("padding-top", 50, 30);
   /* .settings__container */
   &__container {}
 
   /* .settings__title */
   &__title {
     margin-bottom: toRem(14);
-
-    svg {
-      @include adaptiveValue("width", 245, 95);
-      @include adaptiveValue("height", 49, 19);
-
-    }
   }
 
   /* .settings__subtitle */
