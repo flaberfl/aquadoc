@@ -25,6 +25,8 @@
   /* .settings__item */
   &__item {
     display: flex;
+    // align-items: flex-start;
+    gap: 24px;
 
     font-size: toRem(18);
     font-weight: 300;
@@ -34,12 +36,24 @@
 
   /* .settings__name */
   &__name {
-    flex: 0 1 44%;
+    flex: 0 1 43%;
+    overflow: hidden;
+    white-space: nowrap;
+
+
+    &::after {
+      content: "....................................................................................";
+      margin-top: -10px;
+
+      font-size: toRem(35);
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 
   /* .settings__value */
   &__value {
-    flex: 0 1 56%;
+    flex: 0 1 57%;
 
   }
 }
