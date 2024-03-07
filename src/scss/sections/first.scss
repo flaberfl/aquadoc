@@ -9,8 +9,10 @@
     // display: flex;
     justify-items: center;
     align-items: center;
+    // overflow-x: hidden;
 
-    @media (max-width:$tablet){
+
+    @media (max-width:$tablet) {
       grid-template-columns: auto;
     }
   }
@@ -78,11 +80,11 @@
 
   /* .first__slider */
   &__slider {
-    transform: translate(7%.36%, 0px) !important;
-    
-    @media (min-width:$tablet){
+    // transform: translate(7%.36%, 0px) !important;
+
+    @media (min-width:$tablet) {
       overflow: visible !important;
-        
+
     }
   }
 
@@ -96,8 +98,8 @@
     img {
       max-width: 100%;
       mix-blend-mode: lighten;
-      
-      @media (min-width:em(1500)){
+
+      @media (min-width:em(1500)) {
         transform: translate(7.36%, 0px);
       }
     }
