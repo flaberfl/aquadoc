@@ -35,3 +35,32 @@ import { flsModules } from "./modules.js";
 //     remove_class_on_scroll()
 //   }
 // })
+
+
+
+// document.querySelector('.support__social-link').addEventListener('mouseenter', function() {
+//   this.parentNode.classList.add('hhover');
+// });
+
+// var links = document.querySelectorAll('.support__social-link');
+
+// for (var i = 0; i < links.length; i++) {
+//   links[i].addEventListener('mousemove', function () {
+//     this.parentNode.classList.add('main');
+//   });
+// }
+
+
+/* Код для ссылок-при ховере на иконку-родительскому классу задается класс hhv   */
+
+const links = document.querySelectorAll(".support__social-link");
+
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("mouseenter", function () {
+    this.parentNode.classList.add("hhv");
+  });
+
+  links[i].addEventListener("mouseleave", function () {
+    this.parentNode.classList.remove("hhv");
+  });
+}
