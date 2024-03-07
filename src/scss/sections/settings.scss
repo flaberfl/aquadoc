@@ -6,6 +6,12 @@
   /* .settings__title */
   &__title {
     margin-bottom: toRem(14);
+
+    svg {
+      @include adaptiveValue("width", 245, 95);
+      @include adaptiveValue("height", 49, 19);
+
+    }
   }
 
   /* .settings__subtitle */
@@ -17,44 +23,54 @@
   &__list {
     padding: toRem(20);
     display: grid;
-    row-gap: 14px;
+    @include adaptiveValue("row-gap", 14, 20);
+    // row-gap: 14px;
 
     border: 1px solid rgba($color: #ffffff, $alpha: .16);
   }
 
   /* .settings__item */
   &__item {
-    display: flex;
-    // align-items: flex-start;
-    gap: 20px;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 20px;
 
     font-size: toRem(18);
     font-weight: 300;
     line-height: 20px;
     letter-spacing: .9px;
+
+    @media (min-width:$tablet) {
+      grid-template-columns: auto 57%;
+    }
   }
 
   /* .settings__name */
   &__name {
-    flex: 0 1 43%;
+    // flex: 0 1 43%;
     overflow: hidden;
     white-space: nowrap;
     display: flex;
 
     &::after {
-      content: "....................................................................................";
+      content: ".....................................................................................................................";
       margin-top: -10px;
       margin-left: 20px;
       font-size: toRem(35);
       white-space: nowrap;
-      overflow: hidden;
+      // overflow: hidden;
+
+      @media (max-width:$tablet) {
+        margin-left: 10px;
+      }
     }
   }
 
   /* .settings__value */
   &__value {
-    flex: 0 1 57%;
-    white-space: wrap;
+    // flex: 0 1 57%;
+
+    max-width: 100%;
   }
 }
 
