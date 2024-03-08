@@ -7,6 +7,7 @@
   &__container {
     display: grid;
     grid-template-columns: auto 45.7%;
+    align-items: center;
   }
 
   /* .support__media */
@@ -15,7 +16,7 @@
   }
 
   /* .support__social-blok */
-  &__social-blok {
+  &__social-block {
     display: grid;
     row-gap: 22px;
     position: absolute;
@@ -118,26 +119,99 @@
   /* .support__image */
   &__image {
     margin-left: toRem(40);
+    transform: translate(0, -25px);
   }
 
   /* .support__content */
-  &__content {}
+  &__content {
+    display: grid;
+    @include adaptiveValue("gap", 190, 47);
+
+    @include adaptiveValue("padding-bottom", 142, 27);
+  }
 
   /* .support__top */
   &__top {}
 
   /* .support__title */
-  &__title {}
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 43);
+  }
 
-  /* .support__subtitle.subtitle-h3 */
-  &__subtitle.subtitle-h3 {}
+  /* .support__warranty */
+  &__warranty {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 17, 25);
+    @include adaptiveValue("margin-bottom", 60, 22);
+
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: #16C198;
+
+    @media (max-width:$mobile) {
+      letter-spacing: 1px;
+    }
+
+    svg {
+      @include adaptiveValue("width", 32, 24);
+      @include adaptiveValue("height", 36, 27);
+    }
+  }
 
   /* .support__bottom */
-  &__bottom {}
+  &__bottom {
+    p {
+      font-size: toRem(18);
+      letter-spacing: .9px;
+      font-weight: 300;
+      line-height: 28px;
+      @include adaptiveValue("margin-bottom", 27, 9);
+
+      @media (max-width:$mobile) {
+        font-size: toRem(15);
+        letter-spacing: .45px;
+      }
+    }
+  }
 
   /* .support__links */
-  &__links {}
+  &__links {
+    display: grid;
+    gap: 8px;
+  }
 
   /* .support__link */
-  &__link {}
+  &__link {
+    display: block;
+    @include adaptiveValue("padding-left", 37, 32);
+    background: url('@img/icons/download.svg') left center no-repeat;
+
+    font-size: toRem(18);
+    letter-spacing: .9px;
+    line-height: 28px;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(15);
+      letter-spacing: .45px;
+    }
+
+    &_under {
+      text-decoration: underline;
+      padding-left: toRem(0);
+      background-image: none;
+
+      &:not(:last-child) {
+        margin-bottom: toRem(15);
+      }
+
+      @media (max-width:$mobile) {
+        font-size: toRem(16);
+        letter-spacing: 0.8px;
+        line-height: 28px;
+      }
+    }
+  }
 }
