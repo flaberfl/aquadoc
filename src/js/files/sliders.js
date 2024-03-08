@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Pagination} from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -70,7 +70,90 @@ function initSliders() {
 			*/
 
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.first__swiper-pagination',
+				clickable: true,
+			},
+
+			// Брейкпоінти
+			// breakpoints: {
+			// 	360: {
+			// 		// centeredSlides: true,
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	640: {
+			// 		// centeredSlides: true,
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	768: {
+			// 		centeredSlides: true,
+			// 		slidesPerView: 1.5,
+			// 		spaceBetween: -40,
+			// 	},
+			// 	992: {
+			// 		centeredSlides: true,
+			// 		slidesPerView: 1.5,
+			// 		spaceBetween: -60,
+			// 	},
+			// 	1268: {
+			// 		centeredSlides: true,
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 20,
+			// 	},
+			// },
+
+			// Події
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.video__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.video__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 2,
+			spaceBetween: 23,
+			// loop: true,
+			// slidesPerView: 'auto',
+			// height: 'auto',
+			grabCursor: true,
+			// autoHeight: true,
+			speed: 800,
+			freeMode: true,
+			// centeredSlides: true,
+			// centeredSlidesBounds: true,
+			// coverflowEffect: {
+			// 	rotate: 0,
+			// 	stretch: 0,
+			// 	depth: 100,
+			// 	modifier: 2.5,
+
+			// },
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			lazy: true,
+
+			/*
+			// Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			pagination: {
+				el: '.video__swiper-pagination',
 				clickable: true,
 			},
 

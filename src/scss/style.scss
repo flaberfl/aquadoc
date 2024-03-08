@@ -117,10 +117,10 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
+	overflow: hidden !important;
 
 	@supports (overflow: clip) {
-		overflow: clip;
+		overflow: clip !important;
 	}
 
 	// Притискаємо footer
@@ -219,6 +219,7 @@ body {
 @import "sections/settings";
 @import "sections/properties";
 @import "sections/support";
+@import "sections/video";
 
 // @import "footer";
 
