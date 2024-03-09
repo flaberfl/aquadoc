@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Pagination} from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -189,7 +189,87 @@ function initSliders() {
 			}
 		});
 	}
+	if (document.querySelector('.reviews__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.reviews__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 2,
+			spaceBetween: 20,
+			// loop: true,
+			// slidesPerView: 'auto',
+			// height: 'auto',
+			grabCursor: true,
+			// autoHeight: true,
+			speed: 800,
+			freeMode: true,
+			// centeredSlides: true,
+			// centeredSlidesBounds: true,
+			// coverflowEffect: {
+			// 	rotate: 0,
+			// 	stretch: 0,
+			// 	depth: 100,
+			// 	modifier: 2.5,
+
+			// },
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			lazy: true,
+
+			/*
+			// Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			pagination: {
+				el: '.reviews__swiper-pagination',
+				clickable: true,
+			},
+
+			// Брейкпоінти
+			breakpoints: {
+				360: {
+					slidesPerView: 1,
+				},
+				640: {
+					// grid: {
+					// 	rows: 2,
+					// },
+					slidesPerView: 1,
+
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+			},
+
+			// Події
+			on: {
+
+			}
+		});
+	}
 }
+
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');

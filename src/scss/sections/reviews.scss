@@ -10,13 +10,22 @@
   }
 
   /* .reviews__slider */
-  &__slider {}
+  &__slider {
+    overflow-x: visible !important;
+  }
 
   /* .reviews__wrapper */
   &__wrapper {}
 
   /* .reviews__slide */
-  &__slide {}
+  &__slide {
+    @include adaptiveValue("padding-top", 78, 30);
+    @include adaptiveValue("padding-right", 90, 30);
+    @include adaptiveValue("padding-bottom", 80, 26);
+    @include adaptiveValue("padding-left", 115, 27);
+
+    border: 1px solid rgba($color: #fff, $alpha: .16);
+  }
 
   /* .reviews__header */
   &__header {
