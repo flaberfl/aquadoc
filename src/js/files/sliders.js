@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Pagination} from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -163,7 +163,9 @@ function initSliders() {
 					slidesPerView: 1,
 				},
 				640: {
-
+					// grid: {
+					// 	rows: 2,
+					// },
 					slidesPerView: 1,
 
 				},

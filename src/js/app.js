@@ -115,10 +115,10 @@ flsForms.formFieldsInit({
 flsForms.formSubmit();
 
 /* Модуль форми "кількість" */
-flsForms.formQuantity();
+// flsForms.formQuantity();
 
 /* Модуль зіркового рейтингу */
-// flsForms.formRating();
+flsForms.formRating();
 
 /* Модуль роботи з select. */
 // import './libs/select.js'
