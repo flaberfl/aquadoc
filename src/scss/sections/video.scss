@@ -1,27 +1,36 @@
 .video {
-
+  @include adaptiveValue("padding-top", 60, 30);
   overflow: hidden;
   position: relative;
 
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   // width: 13.6%;
+  //   width: calc((120% - 1400px) / 2);
+  //   height: 100%;
+  //   top: 0;
+  //   // left: -20px;
+  //   // left: -2%;
+  //   @include adaptiveValue("left", -120, -100, 1600, 992);
+  //   background: $bodyColor;
+  //   background: red;
+  //   z-index: 50;
+
+  //   // @media (min-width: em(992)) and (max-width: em(1600)) {
+  //   //   width: calc((98% - 1400px) / 2);
+  //   //   transform: translate(50px, 0px);
+  //   //   // width: 10%;
+  //   // }
+
+  // }
 
   /* .video__container */
   &__container {
+    // @include adaptiveValue("padding-bottom", 86, 75);
+  margin-bottom: toRem(230);
 
-    &::before {
-      content: '';
-      position: absolute;
-      // width: 13.6%;
-      width: calc((100% - 1400px) / 2);
-      height: 100%;
-      top: 0;
-      left: -20px;
-      background: $bodyColor;
-      background: red;
-      z-index: 50;
 
-      @media (min-width: em(992)) and (max-width: em(1600)) {}
-
-    }
   }
 
   /* .video__title */
@@ -45,6 +54,7 @@
   /* .video__slider */
   &__slider {
     overflow: visible !important;
+    position: relative;
   }
 
   /* .video__wrapper */
@@ -84,9 +94,18 @@
   }
 
   /* .video__swiper-pagination */
-  &__swiper-pagination {}
-}
+  &__swiper-pagination {
+    bottom: -73px;
 
+    @media (max-width:$tablet) {
+      bottom: -60px;
+    }
+
+    @media (max-width:$mobile) {
+      bottom: -50px;
+    }
+  }
+}
 
 .video-popup-video {
   top: 50%;

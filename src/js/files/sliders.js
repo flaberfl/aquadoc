@@ -158,33 +158,28 @@ function initSliders() {
 			},
 
 			// Брейкпоінти
-			// breakpoints: {
-			// 	360: {
-			// 		// centeredSlides: true,
-			// 		slidesPerView: 1,
-			// 		spaceBetween: 20,
-			// 	},
-			// 	640: {
-			// 		// centeredSlides: true,
-			// 		slidesPerView: 1,
-			// 		spaceBetween: 20,
-			// 	},
-			// 	768: {
-			// 		centeredSlides: true,
-			// 		slidesPerView: 1.5,
-			// 		spaceBetween: -40,
-			// 	},
-			// 	992: {
-			// 		centeredSlides: true,
-			// 		slidesPerView: 1.5,
-			// 		spaceBetween: -60,
-			// 	},
-			// 	1268: {
-			// 		centeredSlides: true,
-			// 		slidesPerView: 3,
-			// 		spaceBetween: 20,
-			// 	},
-			// },
+			breakpoints: {
+				360: {
+					slidesPerView: 1,
+				},
+				640: {
+
+					slidesPerView: 1,
+
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 23,
+				},
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 23,
+				},
+				1268: {
+					slidesPerView: 2,
+					spaceBetween: 23,
+				},
+			},
 
 			// Події
 			on: {
