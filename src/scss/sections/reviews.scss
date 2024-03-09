@@ -1,0 +1,75 @@
+.reviews {
+
+  /* .reviews__container */
+  &__container {}
+
+  /* .reviews__title */
+  &__title {
+    margin-right: toRem(-60);
+    @include adaptiveValue("margin-bottom", 79, 38);
+  }
+
+  /* .reviews__slider */
+  &__slider {}
+
+  /* .reviews__wrapper */
+  &__wrapper {}
+
+  /* .reviews__slide */
+  &__slide {}
+
+  /* .reviews__header */
+  &__header {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("column-gap", 50, 13);
+  }
+
+  /* .reviews__photo */
+  &__photo {
+    border-radius: 50%;
+    @include adaptiveValue("width", 193, 70);
+    @include adaptiveValue("height", 193, 70);
+  }
+
+  /* .reviews__data */
+  &__data {
+    flex: 1 1 auto;
+  }
+
+  /* .reviews__name */
+  &__name {
+    @include adaptiveValue("font-size", 24, 18);
+    letter-spacing: 1.2px;
+    line-height: 28px;
+
+    @media (max-width:$mobile) {
+      letter-spacing: .9px;
+    }
+  }
+
+  /* .reviews__direction */
+  &__direction {}
+
+  /* .reviews__ratng */
+  &__ratng {}
+
+  /* .reviews__content */
+  &__content {}
+
+  /* .reviews__text */
+  &__text {}
+
+  /* .reviews__swiper-pagination */
+  &__swiper-pagination {}
+}
+
+.title-h2 {}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {}
