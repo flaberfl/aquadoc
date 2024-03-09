@@ -34,7 +34,14 @@
 
   /* .reviews__data */
   &__data {
-    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__person {
+    display: grid;
+    gap: toRem(8)
   }
 
   /* .reviews__name */
@@ -49,7 +56,16 @@
   }
 
   /* .reviews__direction */
-  &__direction {}
+  &__direction {
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 28px;
+    letter-spacing: .9px;
+    font-weight: 300;
+
+    @media (max-width:$mobile) {
+      letter-spacing: .7px;
+    }
+  }
 
   /* .reviews__ratng */
   &__ratng {}
