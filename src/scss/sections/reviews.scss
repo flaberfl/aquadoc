@@ -19,11 +19,12 @@
 
   /* .reviews__slide */
   &__slide {
-    width: auto;
     @include adaptiveValue("padding-top", 78, 30);
     @include adaptiveValue("padding-right", 90, 30);
     @include adaptiveValue("padding-bottom", 80, 26);
     @include adaptiveValue("padding-left", 115, 27);
+    max-width: toRem(1045) !important;
+    aspect-ratio: 1045 / 578 !important;
 
     border: 1px solid rgba($color: #fff, $alpha: .16);
   }
