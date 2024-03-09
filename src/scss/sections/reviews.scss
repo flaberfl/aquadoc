@@ -12,6 +12,7 @@
   /* .reviews__slider */
   &__slider {
     overflow: visible !important;
+    position: relative;
   }
 
   /* .reviews__wrapper */
@@ -49,7 +50,7 @@
   &__data {
     display: flex;
     // justify-content: space-between;
-    width: 100%;
+    // width: 100%;
     @include adaptiveValue("gap", 203, 0);
   }
 
