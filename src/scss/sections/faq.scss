@@ -1,0 +1,29 @@
+.faq {
+  @include adaptiveValue("padding-top", 60, 30);
+  overflow: hidden;
+
+  /* .faq__container */
+  &__container {
+    @media (min-width:$tablet) {
+      margin-bottom: toRem(120);
+    }
+  }
+
+  /* .faq__title */
+  &__title {
+    margin-bottom: toRem(30);
+  }
+}
+
+
+.spollers {
+
+  /* .spollers__item */
+  &__item {}
+
+  /* .spollers__title */
+  &__title {}
+
+  /* .spollers__body */
+  &__body {}
+}
