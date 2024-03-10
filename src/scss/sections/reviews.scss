@@ -14,27 +14,27 @@
     overflow: visible !important;
     position: relative;
   }
-
+  
   /* .reviews__wrapper */
   &__wrapper {}
-
+  
   /* .reviews__slide */
-  &__slide {
-    @include adaptiveValue("padding-top", 78, 30);
-    @include adaptiveValue("padding-right", 90, 30);
-    @include adaptiveValue("padding-bottom", 80, 26);
-    @include adaptiveValue("padding-left", 115, 27);
-
-    width: fit-content !important;
-
+  &__body {
+    @include adaptiveValue("padding-top", 58, 10);
+    @include adaptiveValue("padding-right", 30, 10);
+    @include adaptiveValue("padding-bottom", 60, 6);
+    @include adaptiveValue("padding-left", 50, 7);
     border: 1px solid rgba($color: #fff, $alpha: .16);
+    
+    // width: fit-content !important;
+
   }
 
   /* .reviews__header */
   &__header {
     display: flex;
     align-items: center;
-    @include adaptiveValue("column-gap", 50, 13);
+    @include adaptiveValue("column-gap", 30, 13);
 
     @include adaptiveValue("margin-bottom", 41, 24);
   }
@@ -49,9 +49,9 @@
   /* .reviews__data */
   &__data {
     display: flex;
-    // justify-content: space-between;
-    // width: 100%;
-    @include adaptiveValue("gap", 203, 0);
+    justify-content: space-between;
+    width: 100%;
+    // @include adaptiveValue("gap", 203, 0);
   }
 
   &__person {
@@ -83,7 +83,9 @@
   }
 
   /* .reviews__ratng */
-  &__ratng {}
+  &__rating {
+    display: flex;
+  }
 
   /* .reviews__content */
   &__content {

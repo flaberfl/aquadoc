@@ -204,9 +204,9 @@ function initSliders() {
 			// slidesPerView: 'auto',
 			// height: 'auto',
 			// grabCursor: true,
-			// autoHeight: true,
+			autoHeight: true,
 			speed: 800,
-			// freeMode: true,
+			freeMode: true,
 			// centeredSlides: true,
 			// centeredSlidesBounds: true,
 			// coverflowEffect: {
