@@ -204,7 +204,7 @@ function initSliders() {
 			slidesPerView: 'auto',
 			// height: 'auto',
 			// grabCursor: true,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
 			freeMode: true,
 			// centeredSlides: true,
@@ -250,11 +250,11 @@ function initSliders() {
 
 				},
 				768: {
-					slidesPerView: 2,
+					slidesPerView: 1,
 					spaceBetween: 20,
 				},
 				992: {
-					slidesPerView: 2,
+					slidesPerView: 1.5,
 					spaceBetween: 20,
 				},
 				1268: {

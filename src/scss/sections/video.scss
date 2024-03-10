@@ -28,9 +28,10 @@
   /* .video__container */
   &__container {
     // @include adaptiveValue("padding-bottom", 86, 75);
-    margin-bottom: toRem(230);
 
-
+    @media (min-width:em(1280)) {
+      margin-bottom: toRem(230);
+    }
   }
 
   /* .video__title */
