@@ -1,0 +1,98 @@
+.callback {
+
+  /* .callback__container */
+  &__container {
+    display: grid;
+    
+  }
+
+  /* .callback__content */
+  &__content {}
+
+  /* .callback__time */
+  &__time {}
+
+  /* .callback__tel */
+  &__tel {}
+
+  /* .callback__address */
+  &__address {}
+
+  /* .callback__social */
+  &__social {}
+
+  /* .callback__social-block */
+  &__social-block {}
+
+  /* .callback__social-link */
+  &__social-link {}
+
+  /* .callback__image */
+  &__image {}
+
+  /* .callback__send */
+  &__send {}
+
+  /* .callback__form */
+  &__form {}
+}
+
+.section-line {
+
+  /* .section-line_right */
+  &_right {}
+}
+
+.social-block {}
+
+.social-link {}
+
+.form {
+
+  /* .form__title */
+  &__title {}
+
+  /* .form__line */
+  &__line {
+
+    /* .form__line_name */
+    &_name {}
+
+    /* .form__line_tel */
+    &_tel {}
+
+    /* .form__line_mail */
+    &_mail {}
+
+    /* .form__line_text */
+    &_text {}
+  }
+
+  /* .form__button */
+  &__button {}
+}
+
+
+.input {
+
+  /* .input_name */
+  &_name {}
+
+  /* .input_tel */
+  &_tel {}
+
+  /* .input_mail */
+  &_mail {}
+}
+
+.checkbox {
+
+  /* .checkbox__input */
+  &__input {}
+
+  /* .checkbox__label */
+  &__label {}
+
+  /* .checkbox__text */
+  &__text {}
+}
