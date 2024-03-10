@@ -62,6 +62,7 @@
 	font-weight: 500;
 	line-height: 28px;
 	letter-spacing: .9px;
+	text-decoration: underline;
 
 	@media (max-width:$mobile) {
 		font-size: toRem(16);
