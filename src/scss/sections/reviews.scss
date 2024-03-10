@@ -1,7 +1,10 @@
 .reviews {
 
   /* .reviews__container */
-  &__container {}
+  &__container {
+    margin-bottom: toRem(230);
+
+  }
 
   /* .reviews__title */
   &__title {
@@ -14,10 +17,10 @@
     overflow: visible !important;
     position: relative;
   }
-  
+
   /* .reviews__wrapper */
   &__wrapper {}
-  
+
   /* .reviews__slide */
   &__body {
     @include adaptiveValue("padding-top", 58, 10);
@@ -25,7 +28,7 @@
     @include adaptiveValue("padding-bottom", 60, 6);
     @include adaptiveValue("padding-left", 50, 7);
     border: 1px solid rgba($color: #fff, $alpha: .16);
-    
+
     // width: fit-content !important;
 
   }

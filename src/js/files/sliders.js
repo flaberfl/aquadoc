@@ -201,7 +201,7 @@ function initSliders() {
 			slidesPerView: 2,
 			spaceBetween: 20,
 			// loop: true,
-			// slidesPerView: 'auto',
+			slidesPerView: 'auto',
 			// height: 'auto',
 			// grabCursor: true,
 			autoHeight: true,
@@ -258,7 +258,7 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 				1268: {
-					slidesPerView: 2,
+					slidesPerView: 1.5,
 					spaceBetween: 20,
 				},
 			},
