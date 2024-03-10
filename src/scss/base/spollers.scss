@@ -86,7 +86,7 @@
 	@include adaptiveValue("padding-right", 101, 26);
 
 	@include adaptiveValue("font-size", 18, 14);
-	color: $colorGrey;
+	color: red;
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: 0.9px;
@@ -110,6 +110,6 @@
 	transition: all 0.3s;
 
 	._spoller-active & {
-		background-color: $colorGrey;
+		background-color: red;
 	}
 }
