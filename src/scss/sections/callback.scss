@@ -1,34 +1,82 @@
 .callback {
+  @include adaptiveValue("padding-top", 60, 30);
+  background: url('@img/back-main.png') no-repeat;
 
   /* .callback__container */
   &__container {
     display: grid;
-    
+    grid-template-columns: auto 48%;
   }
 
   /* .callback__content */
   &__content {}
 
   /* .callback__time */
-  &__time {}
+  &__time {
+    @include adaptiveValue("margin-bottom", 30, 20);
+
+
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 34px;
+    letter-spacing: toRem(1.2);
+
+    @media (max-width:$mobile) {
+      letter-spacing: toRem(.9);
+    }
+  }
 
   /* .callback__tel */
-  &__tel {}
+  &__tel {
+    display: block;
+    @include adaptiveValue("margin-bottom", 40, 30);
+
+    @include adaptiveValue("font-size", 46, 34);
+    line-height: toRem(28);
+    letter-spacing: toRem(2.3);
+    font-weight: 900;
+
+    @media (max-width:$mobile) {
+      letter-spacing: toRem(1.7);
+    }
+  }
 
   /* .callback__address */
-  &__address {}
+  &__address {
+    max-width: toRem(318);
+    @include adaptiveValue("margin-bottom", 34, 38);
+
+    @include adaptiveValue("font-size", 24, 16);
+    letter-spacing: toRem(1.2);
+    line-height: toRem(34);
+
+    @media (max-width:$mobile) {
+      letter-spacing: toRem(.8);
+      line-height: toRem(26);
+    }
+  }
 
   /* .callback__social */
-  &__social {}
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("padding-right", 100, 20);
+  }
 
   /* .callback__social-block */
-  &__social-block {}
+  &__social-block {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 23, 13);
+  }
 
   /* .callback__social-link */
   &__social-link {}
 
   /* .callback__image */
-  &__image {}
+  &__image {
+    // transform: translate(106px, 10px);
+    max-width: 100%;
+  }
 
   /* .callback__send */
   &__send {}
@@ -37,29 +85,30 @@
   &__form {}
 }
 
-.section-line {
-
-  /* .section-line_right */
-  &_right {}
-}
-
-.social-block {}
-
-.social-link {}
-
 .form {
-
-  /* .form__title */
-  &__title {}
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: toRem(12);
+  column-gap: toRem(20);
 
   /* .form__line */
   &__line {
+    display: grid;
+    gap: toRem(13);
+    grid-column: span 2;
+
 
     /* .form__line_name */
-    &_name {}
-
+    &_name {
+      grid-column: span 1;
+    }
+    
     /* .form__line_tel */
-    &_tel {}
+    &_tel {
+      grid-column: span 1;
+
+      // grid-column-start: 2;
+    }
 
     /* .form__line_mail */
     &_mail {}
@@ -74,6 +123,9 @@
 
 
 .input {
+  background-color: transparent;
+  height: toRem(70);
+  border: 1px solid #A3A3A3;
 
   /* .input_name */
   &_name {}
@@ -83,6 +135,13 @@
 
   /* .input_mail */
   &_mail {}
+}
+
+textarea {
+  min-height: toRem(140);
+  border: 1px solid #A3A3A3;
+  background-color: transparent;
+
 }
 
 .checkbox {
