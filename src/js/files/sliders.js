@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Grid } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -121,7 +121,7 @@ function initSliders() {
 			slidesPerView: 2,
 			spaceBetween: 23,
 			// loop: true,
-			// slidesPerView: 'auto',
+			slidesPerView: 'auto',
 			// height: 'auto',
 			grabCursor: true,
 			// autoHeight: true,
@@ -201,10 +201,10 @@ function initSliders() {
 			slidesPerView: 2,
 			spaceBetween: 20,
 			// loop: true,
-			slidesPerView: 'auto',
+			// slidesPerView: 'auto',
 			// height: 'auto',
 			// grabCursor: true,
-			// autoHeight: true,
+			autoHeight: false,
 			speed: 800,
 			freeMode: true,
 			// centeredSlides: true,
@@ -243,10 +243,10 @@ function initSliders() {
 					slidesPerView: 1,
 				},
 				640: {
+					slidesPerView: 1,
 					// grid: {
 					// 	rows: 2,
 					// },
-					slidesPerView: 1,
 
 				},
 				768: {
