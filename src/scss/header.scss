@@ -51,13 +51,7 @@
 		@include adaptiveValue("padding-top", 6, 9, 0, 600, 345);
 	}
 
-	&__logo {
-
-		img {
-			@include adaptiveValue("width", 235, 97);
-			@include adaptiveValue("height", 102, 20);
-		}
-	}
+	&__logo {}
 
 	&__menu {
 		@media (min-width:$tablet) {

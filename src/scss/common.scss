@@ -70,6 +70,13 @@
 	}
 }
 
+.logo {
+	img {
+		@include adaptiveValue("width", 235, 97);
+		@include adaptiveValue("height", 102, 20);
+	}
+}
+
 .social-block {
 	display: grid;
 	row-gap: 22px;
