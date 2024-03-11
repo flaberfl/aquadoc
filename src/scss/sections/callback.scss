@@ -6,6 +6,9 @@
   &__container {
     display: grid;
     grid-template-columns: auto 48%;
+
+    margin-bottom: toRem(120);
+
   }
 
   /* .callback__content */
@@ -83,6 +86,10 @@
 
   /* .callback__form */
   &__form {}
+
+  &__title {
+    margin-bottom: toRem(20);
+  }
 }
 
 .form {
@@ -94,15 +101,22 @@
   /* .form__line */
   &__line {
     display: grid;
-    gap: toRem(13);
+    gap: toRem(18);
     grid-column: span 2;
 
+    label {
+      margin-left: toRem(6);
+
+      font-size: toRem(18);
+      line-height: toRem(28);
+      letter-spacing: toRem(.9);
+    }
 
     /* .form__line_name */
     &_name {
       grid-column: span 1;
     }
-    
+
     /* .form__line_tel */
     &_tel {
       grid-column: span 1;
@@ -115,6 +129,10 @@
 
     /* .form__line_text */
     &_text {}
+
+    &_policy {
+      margin-top: toRem(20);
+    }
   }
 
   /* .form__button */
@@ -125,6 +143,14 @@
 .input {
   background-color: transparent;
   height: toRem(70);
+  padding: 0 toRem(30);
+
+  font-size: toRem(18);
+  line-height: toRem(28);
+  letter-spacing: toRem(.9);
+  color: #fff;
+  font-weight: 300;
+
   border: 1px solid #A3A3A3;
 
   /* .input_name */
@@ -139,6 +165,8 @@
 
 textarea {
   min-height: toRem(140);
+  padding: toRem(20);
+
   border: 1px solid #A3A3A3;
   background-color: transparent;
 

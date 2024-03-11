@@ -64,3 +64,13 @@ for (let i = 0; i < links.length; i++) {
     this.parentNode.classList.remove("hhv");
   });
 }
+
+
+window.onscroll = function () {
+  const arrow = document.querySelector('.intro__arrow-down');
+  if (window.scrollY > 10) {
+    arrow.classList.add('hidden');
+  } else {
+    arrow.classList.remove('hidden');
+  }
+};
