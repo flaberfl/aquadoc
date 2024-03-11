@@ -5,6 +5,7 @@
 
   /* .setup__container */
   &__container {
+    margin-bottom: toRem(300);
 
     img {
       max-width: 100%;
@@ -293,6 +294,13 @@
       top: 81.4%;
     }
 
+    @media (max-width: em(644)) {
+      right: 168px;
+      top: 97.4%;
+      left: auto;
+      width: 100%;
+    }
+
     &::before {
       bottom: -126px;
       left: 0;
@@ -306,6 +314,17 @@
         bottom: -327px;
         height: toRem(326);
       }
+
+      @media (max-width: em(644)) {
+        transform: rotate(-180deg);
+
+        @include adaptiveValue("bottom", -281, -196, 0, 644, 360);
+        @include adaptiveValue("height", 280, 195, 0, 644, 360);
+      }
+
+      @media (max-width:$mobileSmall) {
+        transform: rotate(-173deg);
+      }
     }
 
     &::after {
@@ -315,6 +334,18 @@
       @media (max-width: em(1100)) {
         right: -303px;
         bottom: 180px;
+      }
+
+      @media (max-width: em(644)) {
+
+        bottom: auto;
+        top: 100px;
+        right: auto;
+
+        @include adaptiveValue("left", 270, 339, 0, 644, 360);
+        @include adaptiveValue("top", -230, -157, 0, 644, 360);
+        // @include adaptiveValue("bottom", 273, 193, 0, 644, 360);
+
       }
     }
   }
@@ -333,6 +364,12 @@
       text-align: right;
     }
 
+    @media (max-width: em(644)) {
+      bottom: 15.5%;
+      left: -30.6%;
+      max-width: toRem(200);
+    }
+
     &::before {
       bottom: -119px;
       right: 0;
@@ -344,6 +381,18 @@
         bottom: -111px;
         height: 110px;
       }
+
+      @media (max-width: em(644)) {
+        transform: rotate(-90.4deg);
+        bottom: -171px;
+        height: 170px;
+
+        bottom: -21px;
+        height: 20px;
+        @include adaptiveValue("bottom", -171, -21, 0, 644, 360);
+        @include adaptiveValue("height", 170, 20, 0, 644, 360);
+
+      }
     }
 
     &::after {
@@ -353,6 +402,13 @@
       @media (max-width: em(1100)) {
         right: -150px;
         bottom: -56px;
+      }
+
+      @media (max-width: em(644)) {
+        right: -200px;
+        bottom: -16px;
+        @include adaptiveValue("right", -200, -50, 0, 644, 360);
+
       }
     }
   }
