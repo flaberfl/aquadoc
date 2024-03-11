@@ -1,6 +1,7 @@
 .footer {
   // height: toRem(357);
-  margin-bottom: toRem(300);
+  // margin-bottom: 300px;
+  @include adaptiveValue("margin-bottom", 117, 90, 2, 1920, 992);
   background-color: $bodyColor;
 
   /* .footer__container */
