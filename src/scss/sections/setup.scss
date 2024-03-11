@@ -386,6 +386,20 @@
         transform: rotate(-47deg);
       }
 
+      @media (max-width: em(644)) {
+        transform: rotate(-64deg);
+        bottom: -227px;
+        height: 226px;
+
+        @include adaptiveValue("bottom", -227, -77, 0, 644, 360);
+        @include adaptiveValue("height", 226, 76, 0, 644, 360);
+
+      }
+
+      @media (max-width:$mobileSmall) {
+        transform: rotate(-54deg);
+      }
+
     }
 
     &::after {
