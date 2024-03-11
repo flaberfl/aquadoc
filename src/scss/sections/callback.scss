@@ -6,13 +6,31 @@
   &__container {
     display: grid;
     grid-template-columns: auto 48%;
+    gap: toRem(20);
 
     margin-bottom: toRem(120);
 
+    @media (max-width:$tablet) {
+      row-gap: toRem(80);
+      grid-template-columns: auto;
+    }
   }
 
   /* .callback__content */
   &__content {}
+
+  &__left {
+    justify-content: center;
+
+    @media (min-width:$mobile) and (max-width:$tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: em(790)) {
+      grid-template-columns: 1fr auto;
+    }
+  }
 
   /* .callback__time */
   &__time {
@@ -22,6 +40,14 @@
     @include adaptiveValue("font-size", 24, 18);
     line-height: 34px;
     letter-spacing: toRem(1.2);
+
+    @media (max-width:$tablet) {
+      justify-self: center;
+    }
+
+    @media (max-width: em(790)) {
+      justify-self: start;
+    }
 
     @media (max-width:$mobile) {
       letter-spacing: toRem(.9);
@@ -38,6 +64,14 @@
     letter-spacing: toRem(2.3);
     font-weight: 900;
 
+    @media (max-width:$tablet) {
+      justify-self: center;
+    }
+
+    @media (max-width: em(790)) {
+      justify-self: start;
+    }
+
     @media (max-width:$mobile) {
       letter-spacing: toRem(1.7);
     }
@@ -45,12 +79,24 @@
 
   /* .callback__address */
   &__address {
-    max-width: toRem(318);
     @include adaptiveValue("margin-bottom", 34, 38);
 
     @include adaptiveValue("font-size", 24, 16);
     letter-spacing: toRem(1.2);
     line-height: toRem(34);
+
+    @media (max-width:$tablet) {
+      justify-self: center;
+      grid-column: span 2;
+    }
+
+    @media (min-width:$tablet) {
+      max-width: toRem(318);
+    }
+
+    @media (max-width: em(790)) {
+      justify-self: start;
+    }
 
     @media (max-width:$mobile) {
       letter-spacing: toRem(.8);
@@ -61,8 +107,13 @@
   /* .callback__social */
   &__social {
     display: flex;
-    justify-content: space-between;
-    @include adaptiveValue("padding-right", 100, 20);
+    // justify-content: center;
+
+    @media (min-width:$tablet) {
+      justify-content: space-between;
+      @include adaptiveValue("padding-right", 100, 50, 1920);
+      // padding-right: 0;
+    }
   }
 
   /* .callback__social-block */
@@ -79,13 +130,24 @@
   &__image {
     // transform: translate(106px, 10px);
     max-width: 100%;
+
+    align-self: center;
   }
 
   /* .callback__send */
-  &__send {}
+  &__send {
+    @media (max-width:$tablet) {
+      grid-row-start: 1;
+    }
+  }
 
   /* .callback__form */
-  &__form {}
+  &__form {
+    @media (max-width:$tablet) {
+      // @include adaptiveValue("padding-left", 300, 0);
+      // @include adaptiveValue("padding-right", 300, 0);
+    }
+  }
 
   &__title {
     margin-bottom: toRem(20);
@@ -114,14 +176,16 @@
 
     /* .form__line_name */
     &_name {
-      grid-column: span 1;
+      @media (min-width: em(1200)) {
+        grid-column: span 1;
+      }
     }
 
     /* .form__line_tel */
     &_tel {
-      grid-column: span 1;
-
-      // grid-column-start: 2;
+      @media (min-width: em(1200)) {
+        grid-column: span 1;
+      }
     }
 
     /* .form__line_mail */
@@ -136,7 +200,10 @@
   }
 
   /* .form__button */
-  &__button {}
+  &__button {
+    margin-top: toRem(20);
+    @include adaptiveValue("width", 230, 320);
+  }
 }
 
 
@@ -149,7 +216,6 @@
   line-height: toRem(28);
   letter-spacing: toRem(.9);
   color: #fff;
-  font-weight: 300;
 
   border: 1px solid #A3A3A3;
 
@@ -161,6 +227,11 @@
 
   /* .input_mail */
   &_mail {}
+
+  &::placeholder {
+    color: #fff;
+    font-weight: 300;
+  }
 }
 
 textarea {
@@ -169,7 +240,12 @@ textarea {
 
   border: 1px solid #A3A3A3;
   background-color: transparent;
+  color: #fff !important;
 
+  &::placeholder {
+    color: #fff;
+    font-weight: 300;
+  }
 }
 
 .checkbox {
