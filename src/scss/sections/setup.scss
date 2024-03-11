@@ -1,13 +1,17 @@
 .setup {
+  @include adaptiveValue("padding-top", 50, 30);
   background: url('@img/back-main.png') center center no-repeat;
-  padding-bottom: toRem(80);
-  // overflow: hidden;
+  overflow: hidden;
 
   /* .setup__container */
   &__container {
 
+    img {
+      max-width: 100%;
+    }
+
     @media (max-width:$mobile) {
-      overflow-x: hidden;
+      // overflow-x: hidden;
     }
   }
 
@@ -107,6 +111,10 @@
       top: 11.6%;
     }
 
+    @media (max-width: em(644)) {
+      left: -25%;
+    }
+
     &::before {
       bottom: -119px;
       right: -1px;
@@ -118,6 +126,13 @@
         height: 290px;
         transform: rotate(-79deg);
       }
+
+      @media (max-width: em(644)) {
+        // bottom: -194px;
+        // height: 193px;
+        @include adaptiveValue("height", 193, 90, 0, 644, 360);
+        @include adaptiveValue("bottom", -194, -91, 0, 644, 360);
+      }
     }
 
     &::after {
@@ -127,6 +142,14 @@
       @media (max-width: em(1100)) {
         right: -328px;
         bottom: -83px;
+      }
+
+      @media (max-width: em(644)) {
+        right: -220px;
+        bottom: -57px;
+        @include adaptiveValue("right", -220, -120, 0, 644, 360);
+        @include adaptiveValue("bottom", -57, -41, 0, 644, 360);
+
       }
     }
   }
@@ -162,10 +185,12 @@
       }
 
       @media (max-width: em(644)) {
-        height: 170px;
-        bottom: -171px;
-        @include adaptiveValue("bottom", -181, -101, 3, 644, 360);
-        @include adaptiveValue("height", 180, 100, 3, 644, 360);
+        // height: 170px;
+        // bottom: -171px;
+        // @include adaptiveValue("bottom", -181, -101, 3, 644, 360);
+        // @include adaptiveValue("height", 180, 100, 3, 644, 360);
+        @include adaptiveValue("bottom", -175, -61, 0, 644, 360);
+        @include adaptiveValue("height", 174, 60, 0, 644, 360);
       }
     }
 
@@ -185,8 +210,13 @@
         // left: 210px;
         // top: 45px;
 
-        @include adaptiveValue("left", 320, 260, 0, 644, 360);
+        @include adaptiveValue("left", 320, 220, 0, 644, 360);
         @include adaptiveValue("top", 75, 45, 0, 644, 360);
+      }
+
+      @media (max-width:$mobileSmall) {
+        // top: 57px;
+        // left: 220px;
       }
     }
 
@@ -206,16 +236,49 @@
       text-align: right;
     }
 
+    @media (max-width: em(644)) {
+      max-width: 200px;
+      left: -32%;
+      top: 27.3%;
+    }
+
     &::before {
       bottom: -119px;
       right: 0;
       height: toRem(118);
       transform: rotate(307deg);
+
+      @media (max-width: em(644)) {
+        transform: rotate(291deg);
+        bottom: -189px;
+        right: 0;
+        height: 188px;
+
+        @include adaptiveValue("bottom", -189, -35, 0, 644, 360);
+        @include adaptiveValue("height", 188, 34, 0, 644, 360);
+
+      }
+
+      @media (max-width:$mobileSmall) {
+        transform: rotate(298deg);
+      }
     }
 
     &::after {
       right: -135px;
       bottom: -107px;
+
+      @media (max-width: em(644)) {
+        // right: -177px;
+        // bottom: -87px;
+
+        // right: -54px;
+        // bottom: -47px;
+        @include adaptiveValue("right", -207, -54, 0, 644, 360);
+        @include adaptiveValue("bottom", -87, -47, 0, 644, 360);
+
+
+      }
     }
   }
 
@@ -303,6 +366,12 @@
       top: 38%;
     }
 
+    @media (max-width: em(644)) {
+      left: -29%;
+      top: 48%;
+      max-width: 200px;
+    }
+
     &::before {
       bottom: -163px;
       left: 0;
@@ -316,6 +385,7 @@
         height: 226px;
         transform: rotate(-47deg);
       }
+
     }
 
     &::after {
@@ -325,6 +395,18 @@
       @media (max-width: em(1100)) {
         left: 467px;
         bottom: -199px;
+      }
+
+      @media (max-width: em(644)) {
+        left: 398px;
+        bottom: -129px;
+
+        left: 248px;
+        bottom: -79px;
+
+        @include adaptiveValue("left", 398, 248, 0, 644, 360);
+        @include adaptiveValue("bottom", -129, -79, 0, 644, 360);
+
       }
 
     }
