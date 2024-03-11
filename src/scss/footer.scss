@@ -9,8 +9,10 @@
     @include adaptiveValue("padding-top", 73, 60);
     @include adaptiveValue("padding-bottom", 50, 30);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: toRem(20);
   }
 
   /* .footer__logo */
