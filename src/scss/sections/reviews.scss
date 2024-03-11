@@ -78,8 +78,8 @@
     // @include adaptiveValue("gap", 203, 0);
     gap: toRem(20);
 
-    @media (max-width:$mobileSmall){
-       flex-direction: column; 
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
     }
   }
 
@@ -124,6 +124,8 @@
 
   /* .reviews__text */
   &__text {
+    padding-right: toRem(10);
+
     background: linear-gradient(180.00deg, rgb(255, 255, 255), rgba(255, 255, 255, 0));
     -webkit-background-clip:
       text;

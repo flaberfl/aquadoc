@@ -7,10 +7,11 @@
     display: grid;
     grid-template-columns: auto 48%;
     gap: toRem(20);
-
     margin-bottom: toRem(120);
 
+
     @media (max-width:$tablet) {
+      margin-bottom: toRem(50);
       row-gap: toRem(80);
       grid-template-columns: auto;
     }
@@ -138,8 +139,8 @@
       transform: translate(-60px, 0);
     }
 
-    @media (max-width: em(550)){
-       width: 70%; 
+    @media (max-width: em(550)) {
+      width: 70%;
     }
   }
 
