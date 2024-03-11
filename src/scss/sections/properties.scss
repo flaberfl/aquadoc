@@ -7,6 +7,8 @@
   &__container {
     // padding-left: toRem(300);
     // padding-right: toRem(300);
+    margin-bottom: toRem(100);
+    @include adaptiveValue("margin-bottom", 100, 20);
   }
 
   /* .properties__title */
