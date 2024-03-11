@@ -1,6 +1,6 @@
 .callback {
   @include adaptiveValue("padding-top", 60, 30);
-  background: url('@img/back-main.png') no-repeat;
+  background: url('@img/back-main.png') top left no-repeat;
 
   /* .callback__container */
   &__container {
