@@ -1,7 +1,6 @@
 .intro {
   position: relative;
-  // padding-top: toRem(88); 
-  // padding-bottom: toRem(60);
+  overflow: hidden;
 
   @media (min-width:em(1280)) {
     margin-top: -26px;
@@ -9,15 +8,9 @@
 
 
   @media (max-width:$tablet) {
-    // padding-top: toRem(160);
     padding-top: toRem(50);
     padding-bottom: toRem(50);
   }
-
-  // @media (max-width:$mobileSmall) {
-  //   padding-top: toRem(110);
-  // }
-
 
   &__bg {
     position: absolute;
