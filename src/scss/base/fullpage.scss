@@ -160,16 +160,22 @@
 			perspective: 1000px;
 			position: absolute;
 			top: 50%;
-			transform: translate(-20%, -50%);
-			right: 30px;
+			transform: translate(20%, -50%);
+			right: toRem(-73);
 			width: 70px;
 		}
 	}
 }
 
-
 .fp-bullet.active a,
 .fp-bullet a:hover {
+
+	span {
+		color: #fff;
+		transform: translate(0%, -50%);
+		left: auto;
+	}
+
 	&::before {
 		background: #fff;
 		height: 18px;
