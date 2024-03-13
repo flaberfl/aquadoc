@@ -1,6 +1,6 @@
 //====================================================================================================
 .header {
-	position: absolute;
+	// position: absolute;
 	// position: static !important;
 	z-index: 600;
 	width: 100%;
@@ -12,16 +12,16 @@
 
 	&__wrapper {
 
-		// position: fixed;
-		// display: flex;
-		// align-items: center;
+		position: fixed;
+		display: flex;
+		align-items: center;
 
 		top: 0;
 		left: 0;
 		width: 100%;
 		padding: toRem(5) 0;
 		// height: 50px;
-		// @include adaptiveValue("height", 100, 50);
+		@include adaptiveValue("height", 100, 50);
 		transition: all 0.4s;
 		z-index: 30;
 
