@@ -53,17 +53,17 @@ import { flsModules } from "./modules.js";
 
 /* Код для ссылок-при ховере на иконку-родительскому классу задается класс hhv  */
 
-// const links = document.querySelectorAll(".support__social-link");
+const links = document.querySelectorAll(".support__social-link");
 
-// for (let i = 0; i < links.length; i++) {
-//   links[i].addEventListener("mouseenter", function () {
-//     this.parentNode.classList.add("hhv");
-//   });
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("mouseenter", function () {
+    this.parentNode.classList.add("hhv");
+  });
 
-//   links[i].addEventListener("mouseleave", function () {
-//     this.parentNode.classList.remove("hhv");
-//   });
-// }
+  links[i].addEventListener("mouseleave", function () {
+    this.parentNode.classList.remove("hhv");
+  });
+}
 
 
 // При прокрутке стрелка вниз изчезает
@@ -76,65 +76,6 @@ window.onscroll = function () {
     arrow.classList.remove('hidden');
   }
 };
-
-
-// const indicators = document.querySelectorAll(".fp-bullet");
-// const sections = document.querySelectorAll("section");
-
-// const resetCurrentActiveIndicator = () => {
-//   const activeIndicator = document.querySelector(".active");
-//   activeIndicator.classList.remove("active");
-// };
-
-// const onSectionLeavesViewport = (section) => {
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           resetCurrentActiveIndicator();
-//           const element = entry.target;
-//           const indicator = document.querySelector(`a[href='#${element.id}']`);
-//           indicator.classList.add("active");
-//           return;
-//         }
-//       });
-//     },
-//     {
-//       root: null,
-//       rootMargin: "0px",
-//       threshold: 0.75
-//     }
-//   );
-//   observer.observe(section);
-// };
-
-// indicators.forEach((indicator) => {
-//   indicator.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     document
-//       .querySelector(this.getAttribute("href"))
-//       .scrollIntoView({ behavior: "smooth" });
-//     resetCurrentActiveIndicator();
-//     this.classList.add("active");
-//   });
-// });
-
-// sections.forEach(onSectionLeavesViewport);
-
-
-
-
-// (function () {
-//   var current = location.pathname.split('/')[1];
-//   if (current === "") return;
-//   var menuItems = document.querySelectorAll('.fp-bullet a');
-//   for (var i = 0, len = menuItems.length; i < len; i++) {
-//       if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
-//           menuItems[i].className += "active";
-//       }
-//   }
-// })();
-
 
 
 /*menu*/

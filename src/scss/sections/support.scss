@@ -1,7 +1,8 @@
 .support {
-  padding-top: toRem(77);
-  @include adaptiveValue("padding-top", 77, 30);
-
+  padding-top: toRem(110);
+  padding-bottom: toRem(20);
+  // @include adaptiveValue("padding-top", 77, 30);
+  overflow: hidden;
   background: url('@img/back-main.png') no-repeat;
 
   /* .support__container */

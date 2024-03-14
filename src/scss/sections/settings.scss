@@ -1,11 +1,7 @@
 .settings {
-@include adaptiveValue("padding-top", 50, 30);
-  /* .settings__container */
-  &__container {
-
-    margin-bottom: toRem(150);
-    @include adaptiveValue("margin-bottom", 150, 30);
-  }
+  // @include adaptiveValue("padding-top", 50, 30);
+  padding-top: 76px;
+  padding-bottom: toRem(67);
 
   /* .settings__title */
   &__title {

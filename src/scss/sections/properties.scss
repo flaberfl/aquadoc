@@ -1,15 +1,6 @@
 .properties {
-  @include adaptiveValue("padding-top", 50, 30);
-  // @include adaptiveValue("padding-bottom", 90, 80);
-  padding-bottom: toRem(80);
-
-  /* .properties__container */
-  &__container {
-    // padding-left: toRem(300);
-    // padding-right: toRem(300);
-    margin-bottom: toRem(100);
-    @include adaptiveValue("margin-bottom", 100, 20);
-  }
+  padding-top: toRem(68);
+  padding-bottom: toRem(92);
 
   /* .properties__title */
   &__title {
@@ -105,4 +96,3 @@
     }
   }
 }
-

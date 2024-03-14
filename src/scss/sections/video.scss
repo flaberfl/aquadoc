@@ -2,6 +2,18 @@
   @include adaptiveValue("padding-top", 60, 30);
   overflow: hidden;
   position: relative;
+  padding-top: toRem(60);
+  z-index: 20;
+
+
+  margin-top: toRem(-47);
+
+  @media (max-width: em(1200)) {
+    margin-top: toRem(-22);
+  }
+
+
+
 
   // &::before {
   //   content: '';
@@ -28,10 +40,6 @@
   /* .video__container */
   &__container {
     // @include adaptiveValue("padding-bottom", 86, 75);
-
-    @media (min-width:em(1280)) {
-      margin-bottom: toRem(230);
-    }
   }
 
   /* .video__title */
