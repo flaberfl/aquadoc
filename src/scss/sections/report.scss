@@ -1,10 +1,9 @@
 .report {
   background: url('@img/back-main.png') left center no-repeat;
-  // padding-top: toRem(60);
   // @include adaptiveValue("padding-top", 60, 30);
-  padding-top: toRem(30);
+  padding-top: toRem(85);
   // @include adaptiveValue("padding-bottom", 60, 60);
-  padding-bottom: toRem(60);
+  padding-bottom: 60px;
 
 
   /* .report__container */
@@ -21,9 +20,9 @@
   /* .report__media */
   &__media {
     align-self: center;
-    justify-self: center;
-
+    
     @media (max-width:$tablet) {
+      justify-self: center;
       overflow: hidden;
       grid-row-start: 2;
     }
