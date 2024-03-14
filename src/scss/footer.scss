@@ -1,11 +1,6 @@
 .footer {
-  // height: toRem(357);
-  // margin-bottom: 300px;
-  @include adaptiveValue("margin-bottom", 117, 90, 2, 1920, 992);
-  background-color: $bodyColor;
-
-  /* .footer__container */
-  &__container {}
+  // background-color: $bodyColor;
+  overflow: hidden;
 
   /* .footer__top */
   &__top {
@@ -15,7 +10,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    // justify-content: around-between;
     gap: toRem(20);
 
     @include adaptiveValue("gap", 20, 0);
