@@ -109,6 +109,10 @@
 	left: 30px;
 	transform: translateY(-50%);
 	z-index: 1000;
+
+	@media (max-width: em(1500)) {
+		display: none;
+	}
 }
 
 .fp-bullet {
