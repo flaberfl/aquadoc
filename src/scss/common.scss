@@ -11,7 +11,8 @@
 	@include adaptiveValue("line-height", 70, 37);
 
 	@media (max-width:$tablet) {
-		// line-height: 37px;
+		letter-spacing: toRem(1.35);
+
 	}
 }
 
@@ -42,6 +43,10 @@
 	span {
 		color: #fff;
 		font-weight: 500;
+	}
+
+	@media (max-width:$mobile){
+		 line-height: toRem(28); 
 	}
 }
 

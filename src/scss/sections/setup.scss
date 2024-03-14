@@ -1,9 +1,10 @@
 .setup {
-  margin-top: toRem(-67);
-  @include adaptiveValue("padding-top", 50, 30);
-  padding-top: 107px;
+  @include adaptiveValue("padding-top", 107, 67);
   background: url('@img/back-main.png') center center no-repeat;
-  overflow: hidden;
+
+  @media (min-width:em(1701)) {
+    margin-top: toRem(-67);
+  }
 
   /* .setup__container */
   &__container {
@@ -14,7 +15,7 @@
 
   /* .setup__title */
   &__title {
-    margin-bottom: toRem(15);
+    @include adaptiveValue("margin-bottom", 15, 45);
 
     text-align: center;
   }
@@ -23,7 +24,6 @@
   &__media {
     position: relative;
     max-width: toRem(516);
-    // display: grid;
 
     @media (min-width:em(1101)) {
       margin: 0 auto;
@@ -94,10 +94,8 @@
       background: url('@img/icons/link-point-mobile.svg') 0 0 no-repeat;
       width: toRem(33);
       height: toRem(33);
-
     }
   }
-
 
   &_1 {
     left: -10.3%;
@@ -125,8 +123,6 @@
       }
 
       @media (max-width: em(644)) {
-        // bottom: -194px;
-        // height: 193px;
         @include adaptiveValue("height", 193, 90, 0, 644, 360);
         @include adaptiveValue("bottom", -194, -91, 0, 644, 360);
       }
@@ -142,8 +138,8 @@
       }
 
       @media (max-width: em(644)) {
-        right: -220px;
-        bottom: -57px;
+        right: toRem(-220);
+        bottom: toRem(-57);
         @include adaptiveValue("right", -220, -120, 0, 644, 360);
         @include adaptiveValue("bottom", -57, -41, 0, 644, 360);
 
@@ -157,7 +153,6 @@
 
 
     @media (max-width: em(1100)) {
-      // right: auto;
       left: -46%;
       top: -1.6%;
     }
@@ -182,10 +177,6 @@
       }
 
       @media (max-width: em(644)) {
-        // height: 170px;
-        // bottom: -171px;
-        // @include adaptiveValue("bottom", -181, -101, 3, 644, 360);
-        // @include adaptiveValue("height", 180, 100, 3, 644, 360);
         @include adaptiveValue("bottom", -175, -61, 0, 644, 360);
         @include adaptiveValue("height", 174, 60, 0, 644, 360);
       }
@@ -201,22 +192,10 @@
       }
 
       @media (max-width: em(644)) {
-        // left: 320px;
-        // top: 75px;
-
-        // left: 210px;
-        // top: 45px;
-
         @include adaptiveValue("left", 320, 220, 0, 644, 360);
         @include adaptiveValue("top", 75, 45, 0, 644, 360);
       }
-
-      @media (max-width:$mobileSmall) {
-        // top: 57px;
-        // left: 220px;
-      }
     }
-
   }
 
   &_3 {
@@ -266,15 +245,8 @@
       bottom: -107px;
 
       @media (max-width: em(644)) {
-        // right: -177px;
-        // bottom: -87px;
-
-        // right: -54px;
-        // bottom: -47px;
         @include adaptiveValue("right", -207, -54, 0, 644, 360);
         @include adaptiveValue("bottom", -87, -47, 0, 644, 360);
-
-
       }
     }
   }
@@ -340,8 +312,6 @@
 
         @include adaptiveValue("left", 270, 339, 0, 644, 360);
         @include adaptiveValue("top", -230, -157, 0, 644, 360);
-        // @include adaptiveValue("bottom", 273, 193, 0, 644, 360);
-
       }
     }
   }
@@ -404,7 +374,6 @@
         right: -200px;
         bottom: -16px;
         @include adaptiveValue("right", -200, -50, 0, 644, 360);
-
       }
     }
   }
@@ -440,18 +409,13 @@
 
       @media (max-width: em(644)) {
         transform: rotate(-64deg);
-        bottom: -227px;
-        height: 226px;
-
         @include adaptiveValue("bottom", -227, -77, 0, 644, 360);
         @include adaptiveValue("height", 226, 76, 0, 644, 360);
-
       }
 
       @media (max-width:$mobileSmall) {
         transform: rotate(-54deg);
       }
-
     }
 
     &::after {
@@ -464,17 +428,9 @@
       }
 
       @media (max-width: em(644)) {
-        left: 398px;
-        bottom: -129px;
-
-        left: 248px;
-        bottom: -79px;
-
         @include adaptiveValue("left", 398, 248, 0, 644, 360);
         @include adaptiveValue("bottom", -129, -79, 0, 644, 360);
-
       }
-
     }
   }
 

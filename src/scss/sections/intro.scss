@@ -1,38 +1,21 @@
 .intro {
   position: relative;
-  overflow: hidden;
-
-  padding-top: 92px;
-
-  padding-bottom: toRem(45);
-
-  // @media (min-width:em(1280)) {
-  //   margin-top: -26px;
-  // }
-
-
-  // @media (max-width:$tablet) {
-  //   padding-top: toRem(50);
-  //   padding-bottom: toRem(50);
-  // }
+  @include adaptiveValue("padding-top", 92, 130);
+  @include adaptiveValue("padding-bottom", 45, 37);
 
   &__bg {
     position: absolute;
     right: 0;
     top: 41%;
     transform: translate(0, -50%);
+
     max-width: 100%;
-    // height: 100%;
     opacity: .24;
-
     object-fit: cover;
-
 
     @media (max-width:$tablet) {
       transform: translate(0, -1%);
-
     }
-
   }
 
   &__body {
@@ -70,6 +53,10 @@
       @include adaptiveValue("margin-bottom", 35, 10);
 
       letter-spacing: 1.9px;
+
+      @media (max-width:$mobile) {
+        letter-spacing: toRem(.9);
+      }
     }
   }
 

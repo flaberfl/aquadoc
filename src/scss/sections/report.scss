@@ -1,9 +1,14 @@
 .report {
+  @include adaptiveValue("padding-top", 85, 76);
+  // padding-bottom: 60px;
+  @include adaptiveValue("padding-bottom", 60, 78);
+
   background: url('@img/back-main.png') left center no-repeat;
-  // @include adaptiveValue("padding-top", 60, 30);
-  padding-top: toRem(85);
-  // @include adaptiveValue("padding-bottom", 60, 60);
-  padding-bottom: 60px;
+
+  @media (max-width: em(1100)){
+  // @include adaptiveValue("padding-bottom", 70, 60);
+      
+  }
 
 
   /* .report__container */
@@ -20,7 +25,7 @@
   /* .report__media */
   &__media {
     align-self: center;
-    
+
     @media (max-width:$tablet) {
       justify-self: center;
       overflow: hidden;
