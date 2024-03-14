@@ -1,24 +1,20 @@
 .setup {
+  margin-top: toRem(-67);
   @include adaptiveValue("padding-top", 50, 30);
+  padding-top: 107px;
   background: url('@img/back-main.png') center center no-repeat;
   overflow: hidden;
 
   /* .setup__container */
   &__container {
-    margin-bottom: toRem(100);
-
     img {
       max-width: 100%;
-    }
-
-    @media (max-width:$mobile) {
-      // overflow-x: hidden;
     }
   }
 
   /* .setup__title */
   &__title {
-    margin-bottom: toRem(20);
+    margin-bottom: toRem(15);
 
     text-align: center;
   }

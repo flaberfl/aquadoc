@@ -1,25 +1,18 @@
 .first {
   background-color: $bodyColor;
-  overflow: hidden;
-  @include adaptiveValue("padding-top", 50, 30);
+  // overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: toRem(90);
 
   /* .first__container */
   &__container {
-    // grid-template-columns: auto 44.6%;
+    grid-template-columns: auto 44.6%;
+    display: flex;
+    display: grid;
+    align-items: center;
+    justify-items: center;
 
-    margin-bottom: toRem(200);
-
-    @media (min-width:em(1200)) {
-      display: flex;
-      align-items: center;
-      justify-items: center;
-    }
-
-    @media (max-width:$mobile) {
-      margin-bottom: toRem(150);
-    }
-
-    @media (max-width:$tablet) {}
+    @media (min-width:em(1200)) {}
   }
 
   /* .first__content */
@@ -91,7 +84,10 @@
   }
 
   /* .first__media */
-  &__media {}
+  &__media {
+    transform: translate(43px, 0px);
+  }
+
 
   /* .first__slider */
   &__slider {
