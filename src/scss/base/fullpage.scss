@@ -138,7 +138,6 @@
 			border-radius: 50px;
 			background-color: rgba($color: #32353D, $alpha: .5);
 			top: 50%;
-			// right: 7px;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			transition-duration: 0.3s;
@@ -159,14 +158,16 @@
 		}
 
 		span {
-			transition-duration: 0.3s;
-			color: transparent;
-			perspective: 1000px;
 			position: absolute;
+			width: 70px;
+			right: toRem(-73);
+			perspective: 1000px;
 			top: 50%;
 			transform: translate(20%, -50%);
-			right: toRem(-73);
-			width: 70px;
+
+			font-size: toRem(16);
+			color: transparent;
+			transition-duration: 0.3s;
 		}
 	}
 }
@@ -178,6 +179,13 @@
 		color: #fff;
 		transform: translate(0%, -50%);
 		left: auto;
+		// padding: 0 toRem(5);
+		// border-radius: 8px;
+		// background-color: $bodyColor;
+
+		@media (max-width: em(1799)) {
+			display: none;
+		}
 	}
 
 	&::before {

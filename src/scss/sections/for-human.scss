@@ -24,6 +24,11 @@
   /* .for-human__image-ibg */
   &__image-ibg {
     aspect-ratio: 592 / 674;
+
+    @include adaptiveValue("margin-left", 200, 0, 3, 991, 360);
+    @include adaptiveValue("margin-right", 200, 0, 3, 991, 360);
+    // @media (max-width:$tablet){
+    // }
   }
 
   /* .for-human__content */

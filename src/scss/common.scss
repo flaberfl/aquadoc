@@ -10,9 +10,12 @@
 
 	@include adaptiveValue("line-height", 70, 37);
 
+	@media (min-width:$tablet) and (max-width: em(1366)) {
+		font-size: toRem(40);
+	}
+
 	@media (max-width:$tablet) {
 		letter-spacing: toRem(1.35);
-
 	}
 }
 
@@ -45,8 +48,8 @@
 		font-weight: 500;
 	}
 
-	@media (max-width:$mobile){
-		 line-height: toRem(28); 
+	@media (max-width:$mobile) {
+		line-height: toRem(28);
 	}
 }
 
