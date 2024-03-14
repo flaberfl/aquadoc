@@ -53,17 +53,17 @@ import { flsModules } from "./modules.js";
 
 /* Код для ссылок-при ховере на иконку-родительскому классу задается класс hhv  */
 
-const links = document.querySelectorAll(".support__social-link");
+// const links = document.querySelectorAll(".support__social-link");
 
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener("mouseenter", function () {
-    this.parentNode.classList.add("hhv");
-  });
+// for (let i = 0; i < links.length; i++) {
+//   links[i].addEventListener("mouseenter", function () {
+//     this.parentNode.classList.add("hhv");
+//   });
 
-  links[i].addEventListener("mouseleave", function () {
-    this.parentNode.classList.remove("hhv");
-  });
-}
+//   links[i].addEventListener("mouseleave", function () {
+//     this.parentNode.classList.remove("hhv");
+//   });
+// }
 
 
 // При прокрутке стрелка вниз изчезает
@@ -78,45 +78,98 @@ window.onscroll = function () {
 };
 
 
-const indicators = document.querySelectorAll(".fp-bullet");
-const sections = document.querySelectorAll("section");
+// const indicators = document.querySelectorAll(".fp-bullet");
+// const sections = document.querySelectorAll("section");
 
-const resetCurrentActiveIndicator = () => {
-  const activeIndicator = document.querySelector(".active");
-  activeIndicator.classList.remove("active");
-};
+// const resetCurrentActiveIndicator = () => {
+//   const activeIndicator = document.querySelector(".active");
+//   activeIndicator.classList.remove("active");
+// };
 
-const onSectionLeavesViewport = (section) => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          resetCurrentActiveIndicator();
-          const element = entry.target;
-          const indicator = document.querySelector(`a[href='#${element.id}']`);
-          indicator.classList.add("active");
-          return;
-        }
-      });
-    },
-    {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.75
+// const onSectionLeavesViewport = (section) => {
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           resetCurrentActiveIndicator();
+//           const element = entry.target;
+//           const indicator = document.querySelector(`a[href='#${element.id}']`);
+//           indicator.classList.add("active");
+//           return;
+//         }
+//       });
+//     },
+//     {
+//       root: null,
+//       rootMargin: "0px",
+//       threshold: 0.75
+//     }
+//   );
+//   observer.observe(section);
+// };
+
+// indicators.forEach((indicator) => {
+//   indicator.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     document
+//       .querySelector(this.getAttribute("href"))
+//       .scrollIntoView({ behavior: "smooth" });
+//     resetCurrentActiveIndicator();
+//     this.classList.add("active");
+//   });
+// });
+
+// sections.forEach(onSectionLeavesViewport);
+
+
+
+
+// (function () {
+//   var current = location.pathname.split('/')[1];
+//   if (current === "") return;
+//   var menuItems = document.querySelectorAll('.fp-bullet a');
+//   for (var i = 0, len = menuItems.length; i < len; i++) {
+//       if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
+//           menuItems[i].className += "active";
+//       }
+//   }
+// })();
+
+
+
+/*menu*/
+var lastId,
+  topMenu = $("#fp-bullets"),
+  topMenuHeight = topMenu.outerHeight() + 15,
+  // All list items
+  menuItems = topMenu.find("a"),
+  // Anchors corresponding to menu items
+  scrollItems = menuItems.map(function () {
+    var item = $($(this).attr("href"));
+    if (item.length) {
+      return item;
     }
-  );
-  observer.observe(section);
-};
-
-indicators.forEach((indicator) => {
-  indicator.addEventListener("click", function (event) {
-    event.preventDefault();
-    document
-      .querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-    resetCurrentActiveIndicator();
-    this.classList.add("active");
   });
-});
 
-sections.forEach(onSectionLeavesViewport);
+// Bind to scroll
+$(window).scroll(function () {
+  // Get container scroll position
+  var fromTop = $(this).scrollTop() + topMenuHeight;
+
+  // Get id of current scroll item
+  var cur = scrollItems.map(function () {
+    if ($(this).offset().top < fromTop)
+      return this;
+  });
+  // Get the id of the current element
+  cur = cur[cur.length - 1];
+  var id = cur && cur.length ? cur[0].id : "";
+
+  if (lastId !== id) {
+    lastId = id;
+    // Set/remove active class
+    menuItems
+      .parent().removeClass("active")
+      .end().filter("[href='#" + id + "']").parent().addClass("active");
+  }
+});

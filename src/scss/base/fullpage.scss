@@ -112,7 +112,7 @@
 }
 
 .fp-bullet {
-	text-align: right;
+	text-align: left;
 
 	&:not(:last-child) {
 		margin-bottom: toRem(16);

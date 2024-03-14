@@ -10,53 +10,53 @@
 
 		<ul id="fp-bullets" class="fp-bullets">
 			<li class="fp-bullet">
-				<a href="#main"><span>Главная</span></a>
+				<a href="#intro" data-goto=".intro"><span>Главная</span></a>
+			</li>
+			<li class="fp-bullet" data-watch>
+				<a href="#report" data-goto="#report"><span>Н2 технологии</span></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#report"><span>Главная</span></a>
+				<a href="#secret" data-goto=".secret" data-goto-header><span>Инновационные решения</span></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#secret"><span>Главная</span></a>
+				<a href="#setup" data-goto=".setup"><span>Дизайн</span></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#setup"><span>Главная</span></a>
+				<a href="#first" data-goto=".first"><span>УФ саоочистка</span></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#first"><span>Главная</span></a>
+				<a href="#settings" data-goto=".settings"><span>Характеристики</span></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#settings"><span>Главная</span></a>
+				<a href="#properties" data-goto=".properties"><span>Характеристики</span></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#properties"><span>Главная</span></a>
+				<a href="#support" data-goto=".support"><span>Поддержка</span></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#support"><span>Главная</span></a>
+				<a href="#video" data-goto=".video"></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#video"><span>Главная</span></a>
+				<a href="#reviews" data-goto=".reviews"><span>Отзывы</span></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#reviews"><span>Главная</span></a>
+				<a href="#for-human" data-goto=".for-human"><span>Вопросы и ответы</span></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#for-human"><span>Главная</span></a>
+				<a href="#features" data-goto=".features"></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#features"><span>Главная</span></a>
+				<a href="#faq" data-goto=".faq"></a>
 			</li>
 			<li class="fp-bullet">
-				<a href="#faq"><span>Главная</span></a>
-			</li>
-			<li class="fp-bullet">
-				<a href="#callback"><span>Главная</span></a>
+				<a href="#callback" data-goto=".callback"></a>
 			</li>
 
 		</ul>
 
 		<main class="page">
 
-			<section class="intro" id="main">
+			<section class="intro" id="intro" data-watch="navigator">
 
 				<img class="intro__bg" src="@img/intro/intro-bg-img-inner.png" alt="">
 
@@ -165,7 +165,7 @@
 				</svg>
 			</div>
 
-			<section class="report section-line_left section-line_right" id="report">
+			<section data-watch="navigator" class="report section-line_left section-line_right" id="report">
 				<div class="report__container">
 					<div class="report__media">
 						<img src="@img/report-mob.png" alt="Test Peport">
@@ -250,7 +250,7 @@
 
 			</section>
 
-			<section class="secret section-line_left" id="secret">
+			<section data-watch="navigator" class="secret section-line_left" id="secret">
 				<div class="secret__container">
 					<div class="secret__content">
 						<h2 class="title-h2 secret__title">
@@ -301,7 +301,7 @@
 				</div>
 			</section>
 
-			<section class="setup section-line_right" id="setup">
+			<section data-watch="navigator" data-goto-header class="setup section-line_right" id="setup">
 				<div class="setup__container">
 					<h2 class="title-h2 setup__title">Премиальный дизайн и бескомпромисное качество сборки</h2>
 					<!-- <img src="@img/007.png" alt=""> -->
@@ -325,7 +325,7 @@
 
 			</section>
 
-			<section class="first section-line_left" id="first">
+			<section data-watch="navigator" class="first section-line_left" id="first">
 				<div class="first__container">
 
 					<div class="first__content">
@@ -437,7 +437,7 @@
 				</div>
 			</section>
 
-			<section class="settings section-line_right" id="settings">
+			<section data-watch="navigator" class="settings section-line_right" id="settings">
 				<div class='settings__container'>
 					<h2 class="title-h2 settings__title">Технические характеристики <svg class="title-svg" width="245" height="49"
 							viewBox="0 0 245 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -527,7 +527,7 @@
 				</div>
 			</section>
 
-			<section class="properties section-line_left" id="properties">
+			<section data-watch="navigator" class="properties section-line_left" id="properties">
 				<div class="properties__container">
 					<h2 class="properties__title title-h2">Стакан воды <svg class="title-svg" width="245" height="49"
 							viewBox="0 0 245 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -590,7 +590,7 @@
 				</div>
 			</section>
 
-			<section class="support section-line_right" id="support">
+			<section data-watch="navigator" class="support section-line_right" id="support">
 				<div class="support__container">
 					<div class="support__media">
 						<div class="support__social-block social-block">
@@ -658,7 +658,7 @@
 				</div>
 			</section>
 
-			<section class="video section-line_left" id="video">
+			<section data-watch="navigator" class="video section-line_left" id="video">
 				<div class="video__container">
 					<h2 class="video__title title-h2">
 						Больше информации <br> на нашем YouTube канале
@@ -797,7 +797,7 @@
 				</div>
 			</section>
 
-			<section class="reviews section-line_right" id="reviews">
+			<section data-watch="navigator" class="reviews section-line_right" id="reviews">
 				<div class="reviews__container">
 					<h2 class="title-h2 reviews__title">Отзывы тех, кто уже попробовал UVePEM</h2>
 
@@ -921,7 +921,7 @@
 				</div>
 			</section>
 
-			<section class="for-human section-line_left" id="for-human">
+			<section data-watch="navigator" class="for-human section-line_left" id="for-human">
 				<div class="for-human__container">
 					<h2 class="title-h2 for-human__title">Чем водород полезен для человека</h2>
 
@@ -956,7 +956,7 @@
 				</div>
 			</section>
 
-			<section class="features section-line_right" id="features">
+			<section data-watch="navigator" class="features section-line_right" id="features">
 				<div class="features__container">
 					<h2 class="title-h2 features__title">Кому нужно <br>
 						пить водородную воду</h2>
@@ -1004,7 +1004,7 @@
 				</div>
 			</section>
 
-			<section class="faq section-line_left" id="faq">
+			<section data-watch="navigator" class="faq section-line_left" id="faq">
 				<div class="faq__container">
 					<h2 class="title-h2 faq__title">Частые вопросы</h2>
 
@@ -1072,7 +1072,7 @@
 				</div>
 			</section>
 
-			<section class="callback section-line_right" id="callback">
+			<section data-watch="navigator" class="callback section-line_right" id="callback">
 				<div class="callback__container">
 
 					<div class="callback__content">
