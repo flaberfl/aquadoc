@@ -1,5 +1,6 @@
 .callback {
-  @include adaptiveValue("padding-top", 60, 30);
+  padding-top: toRem(74);
+  padding-bottom: toRem(20);
   background: url('@img/back-main.png') top left no-repeat;
 
   /* .callback__container */
@@ -7,18 +8,19 @@
     display: grid;
     grid-template-columns: auto 48%;
     gap: toRem(20);
-    margin-bottom: toRem(120);
-
 
     @media (max-width:$tablet) {
-      margin-bottom: toRem(50);
       row-gap: toRem(80);
       grid-template-columns: auto;
     }
   }
 
   /* .callback__content */
-  &__content {}
+  &__content {
+    @media (min-width:$tablet) {
+      padding-top: toRem(20);
+    }
+  }
 
   &__left {
     justify-content: center;
