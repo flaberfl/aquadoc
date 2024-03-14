@@ -1,5 +1,5 @@
 .properties {
-  padding-top: toRem(68);
+  @include adaptiveValue("padding-top", 68, 78);
   padding-bottom: toRem(92);
 
   /* .properties__title */

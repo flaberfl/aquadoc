@@ -1,8 +1,8 @@
 .first {
+  @include adaptiveValue("padding-top", 90, 75);
+  @include adaptiveValue("padding-bottom", 90, 137);
+
   background-color: $bodyColor;
-  // overflow: hidden;
-  padding-top: 90px;
-  padding-bottom: toRem(90);
 
   /* .first__container */
   &__container {

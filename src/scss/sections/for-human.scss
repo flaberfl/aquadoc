@@ -1,7 +1,6 @@
 .for-human {
-  padding-top: toRem(104);
-  padding-bottom: toRem(19);
-  overflow: hidden;
+  @include adaptiveValue("padding-top", 104, 80);
+  @include adaptiveValue("padding-bottom", 19, 57);
   position: relative;
 
   &__title {

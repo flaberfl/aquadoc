@@ -1,5 +1,5 @@
 .support {
-  padding-top: toRem(110);
+  @include adaptiveValue("padding-top", 110, 65);
   padding-bottom: toRem(20);
   // @include adaptiveValue("padding-top", 77, 30);
   overflow: hidden;
@@ -35,7 +35,11 @@
     top: 0;
 
     @media (max-width: em(1200)) {
-      top: -40px;
+      top: toRem(-40);
+    }
+
+    @media (max-width:$mobileSmall) {
+      top: toRem(-22);
     }
   }
 

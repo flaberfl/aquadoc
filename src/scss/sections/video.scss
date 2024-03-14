@@ -1,43 +1,12 @@
 .video {
-  // @include adaptiveValue("padding-top", 60, 30);
-  overflow: hidden;
   position: relative;
   padding-top: toRem(97);
-  padding-bottom: toRem(164);
-
+  @include adaptiveValue("padding-top", 97, 75);
+  @include adaptiveValue("padding-bottom", 164, 115);
   margin-top: toRem(-47);
 
   @media (max-width: em(1200)) {
     margin-top: toRem(-22);
-  }
-
-
-
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   // width: 13.6%;
-  //   width: calc((120% - 1400px) / 2);
-  //   height: 100%;
-  //   top: 0;
-  //   // left: -20px;
-  //   // left: -2%;
-  //   @include adaptiveValue("left", -120, -100, 1600, 992);
-  //   background: $bodyColor;
-  //   background: red;
-  //   z-index: 50;
-
-  //   // @media (min-width: em(992)) and (max-width: em(1600)) {
-  //   //   width: calc((98% - 1400px) / 2);
-  //   //   transform: translate(50px, 0px);
-  //   //   // width: 10%;
-  //   // }
-
-  // }
-
-  /* .video__container */
-  &__container {
-    // @include adaptiveValue("padding-bottom", 86, 75);
   }
 
   /* .video__title */

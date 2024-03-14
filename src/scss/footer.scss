@@ -2,6 +2,10 @@
   // background-color: $bodyColor;
   overflow: hidden;
 
+  @media (max-width:$mobile) {
+    padding-top: toRem(16);
+  }
+
   /* .footer__top */
   &__top {
     padding-top: toRem(50);
@@ -24,7 +28,7 @@
     }
 
     @media (max-width:$mobile) {
-      margin-bottom: toRem(20);
+      margin-bottom: toRem(33);
     }
   }
 

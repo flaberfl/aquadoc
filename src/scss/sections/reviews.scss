@@ -1,7 +1,6 @@
 .reviews {
-  padding-top: toRem(83);
-  padding-bottom: toRem(147);
-  overflow: hidden;
+  @include adaptiveValue("padding-top", 83, 70);
+  @include adaptiveValue("padding-bottom", 147, 109);
 
   /* .reviews__title */
   &__title {
@@ -135,7 +134,7 @@
     @media (max-width:$mobile) {}
 
     @media (max-width: em(440)) {
-      bottom: -20px;
+      bottom: -50px;
 
     }
   }

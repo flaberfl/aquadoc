@@ -1,7 +1,7 @@
 .faq {
   padding-top: toRem(77);
-  padding-bottom: toRem(85);
-  overflow: hidden;
+  @include adaptiveValue("padding-top", 77, 66);
+  @include adaptiveValue("padding-bottom", 85, 67);
 
   /* .faq__title */
   &__title {

@@ -6,6 +6,10 @@
     margin-top: toRem(-67);
   }
 
+  @media (max-width: em(1100)) {
+    @include adaptiveValue("padding-bottom", 60, 100);
+  }
+
   /* .setup__container */
   &__container {
     img {
@@ -269,6 +273,10 @@
       width: 100%;
     }
 
+    @media (max-width: em(380)) {
+      right: 136px;
+    }
+
     &::before {
       bottom: -126px;
       left: 0;
@@ -310,8 +318,12 @@
         top: 100px;
         right: auto;
 
-        @include adaptiveValue("left", 270, 339, 0, 644, 360);
+        @include adaptiveValue("left", 270, 339, 0, 644, 310);
         @include adaptiveValue("top", -230, -157, 0, 644, 360);
+      }
+
+      @media (max-width: em(380)) {
+        left: 310px;
       }
     }
   }
