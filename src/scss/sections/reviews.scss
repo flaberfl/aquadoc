@@ -1,14 +1,7 @@
 .reviews {
-  @include adaptiveValue("padding-top", 60, 30);
-
+  padding-top: toRem(83);
+  padding-bottom: toRem(147);
   overflow: hidden;
-
-  /* .reviews__container */
-  &__container {
-    @media (min-width:$tablet) {
-      margin-bottom: toRem(230);
-    }
-  }
 
   /* .reviews__title */
   &__title {
@@ -28,18 +21,12 @@
   /* .reviews__wrapper */
   &__wrapper {}
 
-  // &__slide {
-  //   height: calc((100% - 30px) / 2) !important;
-  // }
-
   /* .reviews__slide */
   &__body {
     // @include adaptiveValue("padding-top", 58, 10);
     // @include adaptiveValue("padding-right", 30, 10);
     // @include adaptiveValue("padding-bottom", 60, 6);
     // @include adaptiveValue("padding-left", 50, 7);
-
-
 
     @include adaptiveValue("padding-top", 78, 30);
     @include adaptiveValue("padding-right", 90, 30);

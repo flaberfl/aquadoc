@@ -1,17 +1,15 @@
 .video {
-  @include adaptiveValue("padding-top", 60, 30);
+  // @include adaptiveValue("padding-top", 60, 30);
   overflow: hidden;
   position: relative;
-  padding-top: toRem(60);
-  z-index: 20;
-
+  padding-top: toRem(97);
+  padding-bottom: toRem(164);
 
   margin-top: toRem(-47);
 
   @media (max-width: em(1200)) {
     margin-top: toRem(-22);
   }
-
 
 
 

@@ -1,13 +1,7 @@
 .faq {
-  @include adaptiveValue("padding-top", 60, 30);
+  padding-top: toRem(77);
+  padding-bottom: toRem(85);
   overflow: hidden;
-
-  /* .faq__container */
-  &__container {
-    @media (min-width:$tablet) {
-      margin-bottom: toRem(120);
-    }
-  }
 
   /* .faq__title */
   &__title {

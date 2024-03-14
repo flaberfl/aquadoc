@@ -1,12 +1,8 @@
 .features {
-  @include adaptiveValue("padding-top", 50, 30);
+  padding-top: toRem(97);
+  padding-bottom: toRem(94);
   overflow: hidden;
   position: relative;
-
-  /* .features__container */
-  &__container {
-    @include adaptiveValue("margin-bottom", 230, 20);
-  }
 
   /* .features__title */
   &__title {
