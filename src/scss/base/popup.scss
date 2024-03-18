@@ -65,7 +65,6 @@ body::after {
 	align-items: center;
 	padding-left: toRem(20);
 	padding-right: toRem(20);
-
 }
 
 .popup__content {
@@ -88,11 +87,13 @@ body::after {
 	}
 }
 
-.popup__text {
-	// padding: toRem(111) toRem(118) toRem(97) toRem(114);
+.popup__body {
+	padding: toRem(111) toRem(118) toRem(97) toRem(114);
 }
 
-.popup__body {}
+.popup__body {
+	
+}
 
 .popup__image {}
 
