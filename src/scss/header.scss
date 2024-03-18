@@ -7,11 +7,9 @@
 	top: 0;
 	left: 0;
 	background: $bodyColor;
-	// border: 1px solid red;
-	// display: none;
+
 
 	&__wrapper {
-
 		position: fixed;
 		display: flex;
 		align-items: center;
@@ -110,7 +108,7 @@
 
 		a {
 			position: relative;
-			z-index: 1000;
+			z-index: 900;
 		}
 	}
 
@@ -247,7 +245,7 @@
 		position: relative;
 		width: toRem(26);
 		height: toRem(26);
-		z-index: 999;
+		z-index: 990;
 
 		@media (any-hover: none) {
 			cursor: default;
