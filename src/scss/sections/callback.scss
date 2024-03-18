@@ -214,7 +214,7 @@
   /* .form__button */
   &__button {
     margin-top: toRem(20);
-    @include adaptiveValue("width", 230, 320);
+    // @include adaptiveValue("width", 230, 320);
 
 
     position: relative;
