@@ -1,7 +1,5 @@
 //====================================================================================================
 .header {
-	// position: absolute;
-	// position: static !important;
 	z-index: 600;
 	width: 100%;
 	top: 0;
@@ -18,14 +16,12 @@
 		left: 0;
 		width: 100%;
 		padding: toRem(5) 0;
-		// height: 50px;
 		@include adaptiveValue("height", 133, 60);
 		transition: all 0.4s;
 		z-index: 30;
 
 		._header-scroll & {
 			transform: translateY(-100%);
-			// background-color: rgba(0, 0, 0, 0.8);
 			background-color: rgba($color: #191A1F, $alpha: .9);
 			@include adaptiveValue("height", 100, 50);
 

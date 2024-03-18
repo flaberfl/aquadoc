@@ -18,6 +18,45 @@
     }
   }
 
+  &__decore {
+    position: absolute;
+    filter: blur(171px);
+    background: rgba(0, 174, 248, 0.19);
+    width: toRem(384);
+    height: toRem(384);
+    border-radius: 50%;
+    z-index: 10;
+
+    &_1 {
+      top: -159px;
+      right: -159px;
+      // border: 1px solid red;
+    }
+
+    &_2 {
+      width: toRem(245);
+      height: toRem(245);
+      filter: blur(99px);
+      background: rgba(0, 174, 248, 0.47);
+
+      top: 341px;
+      right: 361px;
+    }
+
+    &_3 {
+      bottom: -179px;
+      right: -129px;
+    }
+
+    @media (max-width: em(1600)) {
+      display: none;
+    }
+  }
+
+
+
+
+
   &__body {
     display: grid;
     grid-template-columns: 64% 1fr;
@@ -94,7 +133,6 @@
       row-gap: toRem(36);
       justify-content: center;
       align-items: center;
-      // margin-top: toRem(-30);
       @include adaptiveValue("margin-top", -30, 100);
     }
 
@@ -121,7 +159,6 @@
 
     &:hover {
       &::before {
-        // opacity: .4;
         transform: scale(-1, 1);
       }
 
