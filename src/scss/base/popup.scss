@@ -173,9 +173,8 @@ body::after {
 
 .popup__link {
 	text-decoration: underline;
-	// white-space: wrap;
+	word-wrap: break-word;
 	display: block;
-	width: 100%;
 
 	&:hover {
 		text-decoration: none;
