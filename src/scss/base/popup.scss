@@ -24,7 +24,7 @@ body::after {
 	right: 0;
 	// padding: 30px 10px;
 	transition: visibility 0.8s ease 0s;
-	// visibility: hidden;
+	visibility: hidden;
 	pointer-events: none;
 }
 
@@ -85,7 +85,19 @@ body::after {
 	padding: toRem(111) toRem(118) toRem(97) toRem(114);
 }
 
+.popup__top {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	@include adaptiveValue("gap", 125, 20);
+}
+
+.popup__image-ibg {
+	padding-bottom: 73%;
+}
+
 .popup__title {
+	@include adaptiveValue("margin-bottom", 46, 19);
+
 	@include adaptiveValue("font-size", 36, 27);
 	line-height: toRem(34);
 	letter-spacing: toRem(1.8);
