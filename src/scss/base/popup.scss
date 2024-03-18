@@ -60,19 +60,12 @@ body::after {
 	min-height: 100%;
 	flex: 1 1 auto;
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	// padding-left: toRem(20);
-	// padding-right: toRem(20);
-
 }
 
 .popup__content {
 	background-color: #22242A;
 	width: 100%;
 	max-width: toRem(1400);
-	// border-radius: toRem(50);
 
 	visibility: hidden;
 	opacity: 0;
@@ -92,10 +85,38 @@ body::after {
 	padding: toRem(111) toRem(118) toRem(97) toRem(114);
 }
 
-.popup__body {}
+.popup__title {
+	@include adaptiveValue("font-size", 36, 27);
+	line-height: toRem(34);
+	letter-spacing: toRem(1.8);
 
-.popup__image {}
+	@media (max-width:$mobile) {
+		letter-spacing: toRem(1.35);
+	}
+}
 
+.popup__subtitle {
+	@include adaptiveValue("font-size", 21, 16);
+	line-height: toRem(28);
+	letter-spacing: toRem(1.05);
+
+	@media (max-width:$mobile) {
+		line-height: toRem(26);
+		letter-spacing: toRem(.8);
+	}
+}
+
+.popup__name {
+	font-size: toRem(20);
+	line-height: toRem(36);
+	letter-spacing: toRem(1);
+
+	@media (max-width:$mobile) {
+		font-size: toRem(18);
+		line-height: toRem(28);
+		letter-spacing: toRem(.9);
+	}
+}
 
 
 .video-popup__content {
