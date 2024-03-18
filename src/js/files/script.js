@@ -70,7 +70,7 @@ for (let i = 0; i < links.length; i++) {
 
 window.onscroll = function () {
   const arrow = document.querySelector('.intro__arrow-down');
-  if (window.scrollY > 10) {
+  if (window.scrollY > 100) {
     arrow.classList.add('hidden');
   } else {
     arrow.classList.remove('hidden');
