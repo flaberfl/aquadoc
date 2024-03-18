@@ -63,8 +63,9 @@ body::after {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-left: toRem(20);
-	padding-right: toRem(20);
+	// padding-left: toRem(20);
+	// padding-right: toRem(20);
+
 }
 
 .popup__content {
@@ -91,9 +92,7 @@ body::after {
 	padding: toRem(111) toRem(118) toRem(97) toRem(114);
 }
 
-.popup__body {
-	
-}
+.popup__body {}
 
 .popup__image {}
 
