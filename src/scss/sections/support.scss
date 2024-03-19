@@ -1,7 +1,6 @@
 .support {
   @include adaptiveValue("padding-top", 110, 65);
   padding-bottom: toRem(20);
-  // @include adaptiveValue("padding-top", 77, 30);
   overflow: hidden;
   background: url('@img/back-main.png') no-repeat;
 
@@ -25,7 +24,6 @@
     @media (max-width: em(1090)) {
       grid-row-start: 2;
     }
-
   }
 
   /* .support__social-blok */

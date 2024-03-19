@@ -24,11 +24,8 @@
   /* .for-human__image-ibg */
   &__image-ibg {
     aspect-ratio: 592 / 674;
-
     @include adaptiveValue("margin-left", 200, 0, 3, 991, 360);
     @include adaptiveValue("margin-right", 200, 0, 3, 991, 360);
-    // @media (max-width:$tablet){
-    // }
   }
 
   /* .for-human__content */
@@ -95,7 +92,6 @@
     @media (max-width:$mobile) {
       line-height: 30px;
       letter-spacing: 1px;
-
     }
   }
 
@@ -131,14 +127,11 @@
 
     &:hover {
       &::before {
-        // opacity: .4;
         transform: scale(-1, 1);
       }
 
     }
 
-
-    // align-self: flex-start;
     @media (min-width:$mobileSmall) {
       flex: 0 0 234px;
     }

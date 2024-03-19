@@ -22,11 +22,6 @@
 
   /* .reviews__slide */
   &__body {
-    // @include adaptiveValue("padding-top", 58, 10);
-    // @include adaptiveValue("padding-right", 30, 10);
-    // @include adaptiveValue("padding-bottom", 60, 6);
-    // @include adaptiveValue("padding-left", 50, 7);
-
     @include adaptiveValue("padding-top", 78, 30);
     @include adaptiveValue("padding-right", 90, 30);
     @include adaptiveValue("padding-bottom", 80, 26);
@@ -112,15 +107,15 @@
   &__text {
     padding-right: toRem(10);
 
-    background: linear-gradient(180.00deg, rgb(255, 255, 255), rgba(255, 255, 255, 0));
-    -webkit-background-clip:
-      text;
-    -webkit-text-fill-color:
-      transparent;
-    background-clip:
-      text;
-    text-fill-color:
-      transparent;
+    // background: linear-gradient(180.00deg, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    // -webkit-background-clip:
+    //   text;
+    // -webkit-text-fill-color:
+    //   transparent;
+    // background-clip:
+    //   text;
+    // text-fill-color:
+    //   transparent;
 
     font-weight: 300;
   }
@@ -128,13 +123,13 @@
   /* .reviews__swiper-pagination */
   &__swiper-pagination {
     @media (max-width:$tablet) {
-      bottom: -60px;
+      bottom: toRem(-60);
     }
 
     @media (max-width:$mobile) {}
 
     @media (max-width: em(440)) {
-      bottom: -50px;
+      bottom: toRem(-50);
 
     }
   }

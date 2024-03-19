@@ -110,12 +110,10 @@
   /* .callback__social */
   &__social {
     display: flex;
-    // justify-content: center;
 
     @media (min-width:$tablet) {
       justify-content: space-between;
       @include adaptiveValue("padding-right", 100, 50, 1920);
-      // padding-right: 0;
     }
   }
 
@@ -125,9 +123,6 @@
     flex-direction: column;
     @include adaptiveValue("gap", 23, 13);
   }
-
-  /* .callback__social-link */
-  &__social-link {}
 
   /* .callback__image */
   &__image {
@@ -155,10 +150,7 @@
 
   /* .callback__form */
   &__form {
-    @media (max-width:$tablet) {
-      // @include adaptiveValue("padding-left", 300, 0);
-      // @include adaptiveValue("padding-right", 300, 0);
-    }
+    @media (max-width:$tablet) {}
   }
 
   &__title {
@@ -214,8 +206,6 @@
   /* .form__button */
   &__button {
     margin-top: toRem(20);
-    // @include adaptiveValue("width", 230, 320);
-
 
     position: relative;
     background-color: $bodyColor;
@@ -233,17 +223,11 @@
 
     &:hover {
       &::before {
-        // opacity: .4;
         transform: scale(-1, 1);
       }
-
     }
-
-
-
   }
 }
-
 
 .input {
   background-color: transparent;
@@ -256,15 +240,6 @@
   color: #fff;
 
   border: 1px solid #A3A3A3;
-
-  /* .input_name */
-  &_name {}
-
-  /* .input_tel */
-  &_tel {}
-
-  /* .input_mail */
-  &_mail {}
 
   &::placeholder {
     color: #fff;
@@ -284,16 +259,4 @@ textarea {
     color: #fff;
     font-weight: 300;
   }
-}
-
-.checkbox {
-
-  /* .checkbox__input */
-  &__input {}
-
-  /* .checkbox__label */
-  &__label {}
-
-  /* .checkbox__text */
-  &__text {}
 }

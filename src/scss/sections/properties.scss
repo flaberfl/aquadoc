@@ -58,7 +58,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // padding: toRem(20);
     padding: toRem(53) toRem(20) toRem(35);
   }
 
@@ -91,7 +90,6 @@
       height: 1px;
       top: 12px;
     }
-
 
     @media (max-width:$mobile) {
       font-size: toRem(16);

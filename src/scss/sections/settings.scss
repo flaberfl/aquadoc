@@ -1,6 +1,5 @@
 .settings {
-  // @include adaptiveValue("padding-top", 50, 30);
-  padding-top: 76px;
+  padding-top: toRem(76);
   padding-bottom: toRem(67);
 
   /* .settings__title */
@@ -18,7 +17,6 @@
     padding: toRem(20);
     display: grid;
     @include adaptiveValue("row-gap", 14, 20);
-    // row-gap: 14px;
 
     border: 1px solid rgba($color: #ffffff, $alpha: .16);
   }
@@ -26,8 +24,8 @@
   /* .settings__item */
   &__item {
     display: grid;
-    row-gap: 10px;
-    column-gap: 20px;
+    row-gap: toRem(10);
+    column-gap: toRem(20);
 
     font-size: toRem(18);
     font-weight: 300;
@@ -41,7 +39,6 @@
 
   /* .settings__name */
   &__name {
-    // flex: 0 1 43%;
     overflow: hidden;
     white-space: nowrap;
     display: flex;
@@ -52,7 +49,6 @@
       margin-left: 20px;
       font-size: toRem(35);
       white-space: nowrap;
-      // overflow: hidden;
 
       @media (max-width:$tablet) {
         margin-left: 10px;
@@ -62,12 +58,6 @@
 
   /* .settings__value */
   &__value {
-    // flex: 0 1 57%;
-
     max-width: 100%;
   }
 }
-
-.title-h2 {}
-
-.subtitle-h3 {}
