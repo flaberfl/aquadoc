@@ -1,5 +1,3 @@
-
-
 <?= CFS()->get('link'); ?>
 
 
@@ -12,12 +10,31 @@ foreach ($loop as $row) {
 ?>
 
 
-Тело цикла
+  Тело цикла
 
 
-<?= $row['loop']; ?>
+  <?= $row['loop']; ?>
 
 
+
+<?php
+}
+?>
+
+
+
+Цикл в цикле
+
+<?php
+
+$loop2 = $row['loop2'];
+
+foreach ($loop2 as $row2) {
+
+?>
+
+
+  <?= $row2['loop2']; ?>
 
 <?php
 }
