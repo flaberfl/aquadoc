@@ -518,119 +518,62 @@
 
   <section class="reviews section-line_right" id="reviews">
     <div class="reviews__container">
-      <h2 class="title-h2 reviews__title">Отзывы тех, кто уже попробовал UVePEM</h2>
+      <h2 class="title-h2 reviews__title"><?= CFS()->get('reviews_title'); ?></h2>
 
       <div class="reviews__slider swiper">
 
         <div class="reviews__wrapper swiper-wrapper">
 
-          <div class="reviews__slide swiper-slide">
-            <div class="reviews__body">
+          <?php
 
-              <div class="reviews__header">
-                <img src="<?php bloginfo('template_url'); ?>/img/rev-1.jpg" alt="Фото" class="reviews__photo">
-                <div class="reviews__data">
-                  <div class="reviews__person">
-                    <p class="reviews__name">Наталья Курчанова</p>
-                    <p class="reviews__direction">Халл, Англия</p>
-                  </div>
-                  <div class="reviews__rating">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star.svg" alt="Звезда рейтинга">
-                  </div>
-                </div>
-              </div>
+          $loop = CFS()->get('reviews_items');
 
-              <div class="reviews__content" data-simplebar data-simplebar-auto-hide="false">
-                <p class="reviews__text text-base">
-                  Я сравнительно недавно пью водородную воду. Но пока что я заметила, что эта вода действительно
-                  понижает давление. Эту воду смело могут пить те, у кого гипертония. А я её пью утром и вечером
-                  перед
-                  сном. Генерацию всегда ставлю на 10 минут. Потому что знаю, что водород отделяет эритроциты друг
-                  от
-                  друга и улучшает циркуляцию крови. И ещё.Так как у меня диализ уже 18 лет, не могу пить много - не
-                  более 2 -3 стаканов в день. Поэтому прибор UVePEM со сверхвысокой концентрацией водорода, пожалуй,
-                  единственный способный обеспечить терапевтическую дозу водорода двумя всего стаканами.
-                </p>
-              </div>
-            </div>
-          </div>
+          foreach ($loop as $row) {
 
-          <div class="reviews__slide swiper-slide">
+          ?>
 
-            <div class="reviews__body">
-              <div class="reviews__header">
-                <img src="<?php bloginfo('template_url'); ?>/img/rev-2.jpg" alt="Фото" class="reviews__photo">
-                <div class="reviews__data">
-                  <div class="reviews__person">
-                    <p class="reviews__name">Татьяна Зайлер</p>
-                    <p class="reviews__direction">Таллинн, Эстония</p>
-                  </div>
-                  <div class="reviews__rating">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star.svg" alt="Звезда рейтинга">
+            <div class="reviews__slide swiper-slide">
+              <div class="reviews__body">
+
+                <div class="reviews__header">
+                  <img src="<?= $row['reviews_img']; ?>" alt="Фото" class="reviews__photo">
+                  <div class="reviews__data">
+                    <div class="reviews__person">
+                      <p class="reviews__name"><?= $row['reviews_name']; ?></p>
+                      <p class="reviews__direction"><?= $row['reviews_addr']; ?></p>
+                    </div>
+                    <div class="reviews__rating">
+
+                      <?php
+
+                      $loop2 = $row['reviews_rating'];
+
+                      foreach ($loop2 as $row2) {
+
+                      ?>
+
+                        <?= $row2['loop2']; ?>
+                        <img src="<?= $row2['reviews_star']; ?>" alt="Звезда рейтинга">
+
+                      <?php
+                      }
+                      ?>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="reviews__content" data-simplebar data-simplebar-auto-hide="false">
-                <p class="reviews__text text-base">
-                  В течении месяца с момента как я начала пить водородную воду, я обратила внимание что мой уровень
-                  энергии значительно вырос. Пила всего 1-2 стакана в день, но это заметно улучшило моё состояние -
-                  помимо прилива энергии, мой мозг стал работать лучше и быстрее, я так же заметила что это
-                  отразилось
-                  и на приподнятом настроении.
-                  А вот в последний месяц у меня "отобрала" прибор мама, и сейчас я вижу снова заветную разницу в
-                  замедлении всех процессов. Так что Uvepem работает и довольно эффективно! А мне, похоже нужно
-                  приобрести ещё один прибор.
-                </p>
+                <div class="reviews__content" data-simplebar data-simplebar-auto-hide="false">
+                  <p class="reviews__text text-base">
+                    <?= $row['reviews_text']; ?>
+                  </p>
+                </div>
               </div>
             </div>
 
-          </div>
-          <div class="reviews__slide swiper-slide">
 
-            <div class="reviews__body">
-              <div class="reviews__header">
-                <img src="<?php bloginfo('template_url'); ?>/img/rev-2.jpg" alt="Фото" class="reviews__photo">
-                <div class="reviews__data">
-                  <div class="reviews__person">
-                    <p class="reviews__name">Татьяна Зайлер</p>
-                    <p class="reviews__direction">Таллинн, Эстония</p>
-                  </div>
-                  <div class="reviews__rating">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star+.svg" alt="Звезда рейтинга">
-                    <img src="<?php bloginfo('template_url'); ?>/img/icons/star.svg" alt="Звезда рейтинга">
-                  </div>
-                </div>
-              </div>
-
-              <div class="reviews__content" data-simplebar data-simplebar-auto-hide="false">
-                <p class="reviews__text text-base">
-                  В течении месяца с момента как я начала пить водородную воду, я обратила внимание что мой уровень
-                  энергии значительно вырос. Пила всего 1-2 стакана в день, но это заметно улучшило моё состояние -
-                  помимо прилива энергии, мой мозг стал работать лучше и быстрее, я так же заметила что это
-                  отразилось
-                  и на приподнятом настроении.
-                  А вот в последний месяц у меня "отобрала" прибор мама, и сейчас я вижу снова заветную разницу в
-                  замедлении всех процессов. Так что Uvepem работает и довольно эффективно! А мне, похоже нужно
-                  приобрести ещё один прибор.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-
+          <?php
+          }
+          ?>
 
         </div>
 
