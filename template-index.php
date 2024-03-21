@@ -32,13 +32,13 @@
     <a href="#reviews" data-goto=".reviews"><span>Отзывы</span></a>
   </li>
   <li class="fp-bullet">
-    <a href="#for-human" data-goto=".for-human"><span>Вопросы и ответы</span></a>
+    <a href="#for-human" data-goto=".for-human"></a>
   </li>
   <li class="fp-bullet">
     <a href="#features" data-goto=".features"></a>
   </li>
   <li class="fp-bullet">
-    <a href="#faq" data-goto=".faq"></a>
+    <a href="#faq" data-goto=".faq"><span>FAQ</span></a>
   </li>
   <li class="fp-bullet">
     <a href="#callback" data-goto=".callback"></a>
@@ -585,32 +585,36 @@
 
   <section class="for-human section-line_left" id="for-human">
     <div class="for-human__container">
-      <h2 class="title-h2 for-human__title">Чем водород полезен для человека</h2>
+      <h2 class="title-h2 for-human__title"><?= CFS()->get('human_title'); ?></h2>
 
       <div class="for-human__body">
 
-        <div class="for-human__image-ibg"><img data-src="<?php bloginfo('template_url'); ?>/img/for-human.jpg" alt="Фото человека"></div>
+        <div class="for-human__image-ibg"><img data-src="<?= CFS()->get('human_img'); ?>" alt="Фото человека"></div>
         <div class="for-human__content">
           <h3 class="subtitle-h3 for-human__subtitle">
-            <p>Опубликованных исследований с описанием эффектов от употребления водородной воды уже более двух
-              тысяч!</p>
-            <p>Водородная вода может помочь в комплексном лечении и профилактике:</p>
+            <p><?= CFS()->get('human_subtitle'); ?></p>
+            <p><?= CFS()->get('human_list'); ?></p>
           </h3>
           <ul class="for-human__list">
-            <li class="for-human__item text-18">Аллергических реакций
-            </li>
-            <li class="for-human__item text-18">Избыточного количества свободных радикалов
-            </li>
-            <li class="for-human__item text-18">Слабого иммунитета
-            </li>
-            <li class="for-human__item text-18">Воспалительных процессов на ранней стадии
-            </li>
-            <li class="for-human__item text-18">Сниженного метаболизма
-            </li>
+
+            <?php
+
+            $loop = CFS()->get('human_items');
+
+            foreach ($loop as $row) {
+
+            ?>
+
+              <li class="for-human__item text-18"><?= $row['human_item']; ?></li>
+
+            <?php
+            }
+            ?>
+
           </ul>
           <p class="for-human__slogan">Водородная вода - путь к оздоровлению организма</p>
           <div class="for-human__bottom">
-            <button type="submit" class="button for-human__button">Оставить заявку</button>
+            <button type="submit" data-goto=".callback" class="button for-human__button">Оставить заявку</button>
             <p class="for-human__text">для получения оригиналов научных статей</p>
           </div>
         </div>
