@@ -4,9 +4,9 @@
       <a href="#" class="footer__logo logo">
         <img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="Логотип">
       </a>
-      <a href="" class="footer__link text-base">Отказ от ответственности</a>
-      <a href="" class="footer__link text-base">Условия продаж и возврата товара</a>
-      <a href="" class="footer__link text-base">Политика конфиденциальности</a>
+      <a href="" class="footer__link text-base"><?php pll_e('protection'); ?></a>
+      <a href="" class="footer__link text-base"><?php pll_e('disclaimer'); ?></a>
+      <a href="" class="footer__link text-base"><?php pll_e('policy'); ?></a>
       <!-- <button type="button" aria-label="Open menu" aria-checked="false" class="icon-menu">
 				<span></span>
 			</button> -->

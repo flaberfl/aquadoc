@@ -39,3 +39,9 @@ foreach ($loop2 as $row2) {
 <?php
 }
 ?>
+
+
+Переводы
+
+<?php pll_e('call_me'); ?>
+
