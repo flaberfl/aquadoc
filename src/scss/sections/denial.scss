@@ -1,0 +1,18 @@
+.denial {
+  @include adaptiveValue("padding-top", 150, 100);
+}
+
+.denial__container {
+  
+}
+
+.denial__title {
+  margin-bottom: toRem(40);
+  // text-align: center;
+}
+
+.denial__text {
+  p {
+    margin-bottom: toRem(20);
+  }
+}
