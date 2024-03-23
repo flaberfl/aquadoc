@@ -71,7 +71,6 @@
   &__button {
     justify-self: center;
 
-
     position: relative;
     background-color: $bodyColor;
 
@@ -92,8 +91,23 @@
       }
     }
 
+  }
+
+  // Переписать стили margin-top пришел из button
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: toRem(20);
+    flex-wrap: wrap;
+
     @media (min-width:$tablet) {
       @include adaptiveValue("margin-top", 89, 0);
     }
+  }
+
+  // Переписать стили
+  &__link {
+    display: none !important;
   }
 }
