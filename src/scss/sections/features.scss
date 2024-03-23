@@ -1,5 +1,4 @@
 .features {
-  padding-top: toRem(97);
   @include adaptiveValue("padding-top", 97, 70);
   @include adaptiveValue("padding-bottom", 94, 59);
   position: relative;
@@ -66,5 +65,9 @@
       font-size: toRem(16);
       letter-spacing: toRem(.8);
     }
+  }
+
+  &__link {
+    text-decoration: underline;
   }
 }
