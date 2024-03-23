@@ -15,8 +15,13 @@
   p {
     margin-bottom: toRem(20);
     padding-left: toRem(20);
+
+    .policy & {
+      padding-left: toRem(0);
+    }
   }
-// den
+
+  // den
   b {
     font-weight: 700;
     @include adaptiveValue("font-size", 20, 18);
