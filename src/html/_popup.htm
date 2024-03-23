@@ -1,4 +1,4 @@
-<div id="features-popup" aria-hidden="true" class="features-popup popup popup_show1">
+<div id="features-popup" aria-hidden="true" class="features-popup popup">
 	<div class="popup__wrapper features-popup__wrapper">
 		<div class="popup__content features-popup__content">
 			<button data-close type="button" class="popup__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -73,9 +73,9 @@
 </div>
 
 
-<div id="submit-popup" aria-hidden="true" class="submit-popup popup popup_show">
+<div id="submit-popup" aria-hidden="true" class="submit-popup popup form-popup popup_show">
 	<div class="popup__wrapper submit-popup__wrapper">
-		<div class="popup__content submit-popup__content popup_show1">
+		<div class="popup__content submit-popup__content">
 			<button data-close type="button" class="popup__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 					xmlns="http://www.w3.org/2000/svg">
 					<rect x="31.1128" y="4.94971" width="37" height="7" rx="3" transform="rotate(135 31.1128 4.94971)"
@@ -85,7 +85,65 @@
 				</svg>
 			</button>
 			<div class="popup__body submit-popup__body">
-				<h2 class="title-h2 submit-popup__title">Оставить заявку</h2>
+				<h2 class="submit-popup__title">Оставить заявку</h2>
+
+				<form class="form" action="">
+					<div class="form__line form__line_name">
+						<label for="name">Имя *</label>
+						<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="Ваше имя"
+							class="input input_name">
+					</div>
+
+					<div class="form__line form__line_tel">
+						<label for="name">Телефон *</label>
+						<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш номер телефона"
+							class="input input_tel">
+					</div>
+
+					<div class="form__line form__line_mail">
+						<label for="name">E-mail *</label>
+						<input autocomplete="off" type="email" name="tel" data-error="Ошибка" placeholder="Ваш e-mail"
+							class="input input_mail">
+					</div>
+
+					<div class="form__line form__line_text">
+						<label for="name">Ваш вопрос *</label>
+						<textarea name="callback-text" id="callback-text" cols="30" rows="5"
+							placeholder="Задайте свой вопрос"></textarea>
+					</div>
+
+					<div class="form__line form__line_policy">
+						<div class="checkbox">
+							<input id="c_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="c_2" class="checkbox__label"><span class="checkbox__text">Согласен с политикой
+									конфидециальности</span></label>
+						</div>
+					</div>
+
+					<div class="form__line form__line_button">
+						<button type="submit" class="button form__button for-human__button">Оставить заявку</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="report-popup" aria-hidden="true" class="submit-popup popup popup_show1 form-popup">
+	<div class="popup__wrapper submit-popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<rect x="31.1128" y="4.94971" width="37" height="7" rx="3" transform="rotate(135 31.1128 4.94971)"
+						fill="#D9D9D9" />
+					<rect width="37" height="7" rx="3" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 31.1128 26.1636)"
+						fill="#D9D9D9" />
+				</svg>
+			</button>
+			<div class="popup__body submit-popup__body">
+				<h2 class="submit-popup__title">Получить оригинал <br> Test Report</h2>
 
 				<form class="form" action="">
 					<div class="form__line form__line_name">

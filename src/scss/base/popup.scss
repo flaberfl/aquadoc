@@ -30,7 +30,6 @@ body::after {
 }
 
 .popup_show {
-	// z-index: 150;
 	z-index: 800;
 	visibility: visible;
 	overflow: auto;
@@ -45,8 +44,6 @@ body::after {
 
 .popup__close {
 	position: absolute;
-	// right: toRem(30);
-	// top: toRem(30);
 	@include adaptiveValue("right", 30, 24);
 	@include adaptiveValue("top", 30, 24);
 	z-index: 100;
@@ -56,11 +53,6 @@ body::after {
 		@include adaptiveValue("height", 37, 15);
 
 	}
-
-	// @media (max-width:$mobile) {
-	// 	right: toRem(35);
-	// 	top: toRem(30);
-	// }
 }
 
 .popup__wrapper {
@@ -88,17 +80,29 @@ body::after {
 		background-color: #000;
 	}
 
+	// Переписать в стили
+	.form-popup & {
+		max-width: toRem(700);
+	}
+
 	.lock & {
 		visibility: visible;
 	}
 }
 
+// Переписать в стили
 .popup__body {
 	// padding: toRem(111) toRem(118) toRem(97) toRem(114);
 	@include adaptiveValue("padding-top", 90, 58);
 	@include adaptiveValue("margin-left", 90, 26);
 	@include adaptiveValue("margin-right", 90, 26);
 	@include adaptiveValue("margin-bottom", 70, 28);
+
+	// Переписать в стили
+	.form-popup & {
+		@include adaptiveValue("margin-left", 50, 26);
+		@include adaptiveValue("margin-right", 50, 26);
+	}
 }
 
 .popup__top {
@@ -199,11 +203,16 @@ body::after {
 	// border-radius: 50px;
 }
 
-
+// Переписать в стили
 .submit-popup__body {
-	@include adaptiveValue("padding-top", 80, 40);
+	@include adaptiveValue("padding-top", 60, 40);
 }
 
+// Переписать в стили
 .submit-popup__title {
 	@include adaptiveValue("margin-bottom", 40, 20);
+
+	font-family: MontserratAlternates;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 40, 26);
 }

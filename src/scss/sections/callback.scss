@@ -182,6 +182,11 @@
     &_name {
       @media (min-width: em(1200)) {
         grid-column: span 1;
+
+        // Переписать в стили
+        .form-popup & {
+          grid-column: span 2;
+        }
       }
     }
 
@@ -189,6 +194,11 @@
     &_tel {
       @media (min-width: em(1200)) {
         grid-column: span 1;
+
+        // Переписать в стили
+        .form-popup & {
+          grid-column: span 2;
+        }
       }
     }
 
