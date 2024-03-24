@@ -21,17 +21,16 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: toRem(46);
     @include adaptiveValue("margin-bottom", 60, 50);
-    
-    
-    @media (max-width:$mobile){
+
+
+    @media (max-width:$mobile) {
       grid-template-columns: repeat(2, 1fr);
     }
-    
-    @media (max-width: em(580)){
+
+    @media (max-width: em(580)) {
       grid-template-columns: auto;
     }
   }
-
 
   .nav-links {
     display: flex;
