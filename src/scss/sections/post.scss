@@ -1,8 +1,14 @@
 .post {
   @include adaptiveValue("padding-top", 157, 120);
+  padding-bottom: toRem(44);
 
   /* .post__container */
-  &__container {}
+  &__container {
+    @media (min-width: em(600)) and (max-width: em(1500)) {
+      padding-right: toRem(70);
+      padding-left: toRem(70);
+    }
+  }
 
   /* .post__title */
   &__title {
@@ -16,6 +22,10 @@
     @include adaptiveValue("gap", 120, 30);
     align-items: center;
     @include adaptiveValue("margin-bottom", 78, 33);
+
+    @media (max-width:$tablet) {
+      grid-template-columns: auto;
+    }
   }
 
   /* .post__left-side */
@@ -56,6 +66,10 @@
   &__image-ibg {
     padding-bottom: 73%;
     aspect-ratio: 572 / 415;
+
+    @media (max-width:$tablet) {
+      grid-row-start: 1;
+    }
   }
 
   /* .post__body */
@@ -63,33 +77,16 @@
     @include adaptiveValue("margin-bottom", 100, 30);
   }
 
-  /* .post__footer */
-  &__footer {}
-
   /* .post__box */
   &__box {
     display: grid;
     grid-template-columns: 49.35% 1fr;
-    @include adaptiveValue("gap", 110, 30);
+    @include adaptiveValue("gap", 118, 30);
     align-items: center;
+    @include adaptiveValue("margin-bottom", 98, 23);
+
+    @media (max-width:$tablet) {
+      grid-template-columns: auto;
+    }
   }
-
-  /* .post__list */
-  &__list {}
-
-  /* .post__items */
-  &__items {}
-
-  /* .post__item */
-  &__item {}
 }
-
-.title-h2 {}
-
-.for-human {
-
-  /* .for-human__item */
-  &__item {}
-}
-
-.text-18 {}
