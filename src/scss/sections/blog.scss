@@ -2,7 +2,6 @@
   @include adaptiveValue("padding-top", 150, 70);
   @include adaptiveValue("padding-bottom", 80, 70);
 
-
   &__title {
     @include adaptiveValue("margin-bottom", 30, 18)
   }
@@ -21,7 +20,6 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: toRem(46);
     @include adaptiveValue("margin-bottom", 60, 50);
-
 
     @media (max-width:$mobile) {
       grid-template-columns: repeat(2, 1fr);
@@ -56,7 +54,6 @@
     &:hover {
       border: 1px solid #fff;
     }
-
   }
 
   .page-numbers.current {
