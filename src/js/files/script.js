@@ -66,3 +66,21 @@ $(window).scroll(function () {
       .end().filter("[href='#" + id + "']").parent().addClass("active");
   }
 });
+
+
+// Присвоим попапам и линкам на них порядковые номера
+
+
+const objPopupVideoLink = document.querySelectorAll('.video-popup-video');
+const objPopupVideo = document.querySelectorAll('.video-popup');
+
+
+
+objPopupVideoLink.forEach((element, i) =>
+  element.setAttribute('data-popup', '#videos-popup-video' + '-' + i));
+
+for (var i = 0, b; b = document.getElementById('videos-popup-video'); ++i) {
+  b.id += '-' + i;
+}
+
+
