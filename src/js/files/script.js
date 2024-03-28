@@ -18,6 +18,19 @@ for (let i = 0; i < links.length; i++) {
 }
 
 
+const parts = document.querySelectorAll(".line-tooltip");
+
+for (let i = 0; i < parts.length; i++) {
+  parts[i].addEventListener("mouseenter", function () {
+    this.parentNode.classList.add("hov");
+  });
+
+  parts[i].addEventListener("mouseleave", function () {
+    this.parentNode.classList.remove("hov");
+  });
+}
+
+
 // При прокрутке стрелка вниз изчезает
 
 // window.onscroll = function () {

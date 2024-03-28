@@ -58,10 +58,12 @@
 
 .line-tooltip {
   display: inline-block;
+  // display: block;
   position: absolute;
   border-bottom: 1px solid #fff;
   padding-bottom: toRem(8);
   max-width: toRem(308);
+  cursor: pointer;
 
   @include adaptiveValue("font-size", 18, 14);
   letter-spacing: .9px;
@@ -104,6 +106,12 @@
   &_1 {
     left: -10.3%;
     top: 8.6%;
+
+    &:hover {
+      .setup-parts_1 {
+        opacity: 1;
+      }
+    }
 
     @media (max-width: em(1100)) {
       left: -46%;
@@ -154,6 +162,12 @@
   &_2 {
     right: -46.1%;
     top: 18.4%;
+
+    &:hover {
+      .setup-parts_2 {
+        opacity: 1;
+      }
+    }
 
 
     @media (max-width: em(1100)) {
@@ -450,3 +464,40 @@
     left: 0;
   }
 }
+
+
+
+.setup-parts {
+  position: absolute;
+  border-radius: 50%;
+  @include adaptiveValue("width", 219, 150);
+  @include adaptiveValue("height", 219, 150);
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  z-index: 100;
+  max-width: 100%;
+
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+// .setup-parts_1 {
+//   .hov & {
+//     opacity: 1;
+//   }
+// }
+
+// .setup-parts_2 {
+//   .hov & {
+//     opacity: 1;
+//   }
+// }
+
+// @for $i from 1 through 6 {
+//   .setup-parts_#{$i} {
+//     .hov & {
+//       opacity: 1;
+//     }
+//   }
+// }
