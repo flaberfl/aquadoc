@@ -99,38 +99,38 @@ for (var i = 0, b; b = document.getElementById('videos-popup-video'); ++i) {
 // Если checkbox отлючен-кнопка Submit - неактивна
 
 
-const checkbox = document.getElementById('i-submit');
-const btn_submit = document.getElementById('b-submit');
+// const checkbox = document.getElementById('i-submit');
+// const btn_submit = document.getElementById('b-submit');
 
-btn_submit.disabled = true;
-checkbox.addEventListener("change", () => {
-  if (checkbox.checked) {
-    btn_submit.disabled = false;
-  } else {
-    btn_submit.disabled = true;
-  }
-});
+// btn_submit.disabled = true;
+// checkbox.addEventListener("change", () => {
+//   if (checkbox.checked) {
+//     btn_submit.disabled = false;
+//   } else {
+//     btn_submit.disabled = true;
+//   }
+// });
 
-const checkbox2 = document.getElementById('i-report');
-const btn_submit2 = document.getElementById('b-report');
+// const checkbox2 = document.getElementById('i-report');
+// const btn_submit2 = document.getElementById('b-report');
 
-btn_submit2.disabled = true;
-checkbox2.addEventListener("change", () => {
-  if (checkbox2.checked) {
-    btn_submit2.disabled = false;
-  } else {
-    btn_submit2.disabled = true;
-  }
-});
+// btn_submit2.disabled = true;
+// checkbox2.addEventListener("change", () => {
+//   if (checkbox2.checked) {
+//     btn_submit2.disabled = false;
+//   } else {
+//     btn_submit2.disabled = true;
+//   }
+// });
 
-const checkbox3 = document.getElementById('i-callback');
-const btn_submit3 = document.getElementById('b-callback');
+// const checkbox3 = document.getElementById('i-callback');
+// const btn_submit3 = document.getElementById('b-callback');
 
-btn_submit3.disabled = true;
-checkbox3.addEventListener("change", () => {
-  if (checkbox3.checked) {
-    btn_submit3.disabled = false;
-  } else {
-    btn_submit3.disabled = true;
-  }
-});
+// btn_submit3.disabled = true;
+// checkbox3.addEventListener("change", () => {
+//   if (checkbox3.checked) {
+//     btn_submit3.disabled = false;
+//   } else {
+//     btn_submit3.disabled = true;
+//   }
+// });

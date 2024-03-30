@@ -343,3 +343,15 @@
 [delay120] {
 	transition: all $animSpeed ease 1.2s;
 }
+
+.page404 {
+	padding-top: toRem(200);
+
+	@media (max-width:$mobile) {
+		padding-top: toRem(150);
+	}
+}
+
+.page404__container {
+	text-align: center;
+}
