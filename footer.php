@@ -160,6 +160,146 @@
     </div>
   </div>
 </div>
+
+
+<div id="guarantee-popup" aria-hidden="true" class="guarantee-popup popup form-popup">
+	<div class="popup__wrapper guarantee-popup__wrapper">
+		<div class="popup__content guarantee-popup__content">
+			<button data-close type="button" class="popup__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<rect x="31.1128" y="4.94971" width="37" height="7" rx="3" transform="rotate(135 31.1128 4.94971)"
+						fill="#D9D9D9" />
+					<rect width="37" height="7" rx="3" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 31.1128 26.1636)"
+						fill="#D9D9D9" />
+				</svg>
+			</button>
+			<div class="popup__body submit-popup__body">
+				<h2 class="submit-popup__title"><?php pll_e('guarantee'); ?></h2>
+
+				<form class="form" action="">
+					<div class="form__line form__line_name">
+						<label for="name">Имя, Фамилия *</label>
+						<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="Ваше имя, Фамилия"
+							class="input input_name">
+					</div>
+
+					<div class="form__line form__line_tel">
+						<label for="name">Телефон *</label>
+						<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш номер телефона"
+							class="input input_tel">
+					</div>
+
+					<div class="form__line form__line_mail">
+						<label for="name">E-mail *</label>
+						<input autocomplete="off" type="email" name="tel" data-error="Ошибка" placeholder="Ваш e-mail"
+							class="input input_mail">
+					</div>
+					
+			<div class="form__line form__line_number">
+						<label for="name">Номер прибора *</label>
+						<input autocomplete="off" type="number" name="tel" data-error="Ошибка" placeholder="Номер прибора"
+							class="input input_mail">
+					</div>
+
+					<div class="form__line form__line_text">
+						<label for="name">Дата и место покупки *</label>
+				<input autocomplete="off" type="text" name="tel" data-error="Ошибка" placeholder="Дата и место покупки"
+							class="input input_mail">
+					</div>
+
+					<div class="form__line form__line_policy">
+							<div class="checkbox">
+							<input id="manual-submit" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="manual-submit" class="checkbox__label"><span class="checkbox__text">Я внимательно ознакомился с Руководством пользователя</span></label>
+						</div>
+						<div class="checkbox">
+							<input id="pol-submit" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="pol-submit" class="checkbox__label"><span class="checkbox__text">Согласен с политикой
+									конфидециальности</span></label>
+						</div>
+					</div>
+
+					<div class="form__line form__line_button">
+						<button id="pol-submit-b" type="submit" class="button form__button for-human__button">Регистрировать</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="repair-popup" aria-hidden="true" class="repair-popup popup form-popup">
+	<div class="popup__wrapper repair-popup__wrapper">
+		<div class="popup__content repair-popup__content">
+			<button data-close type="button" class="popup__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<rect x="31.1128" y="4.94971" width="37" height="7" rx="3" transform="rotate(135 31.1128 4.94971)"
+						fill="#D9D9D9" />
+					<rect width="37" height="7" rx="3" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 31.1128 26.1636)"
+						fill="#D9D9D9" />
+				</svg>
+			</button>
+			<div class="popup__body repair-popup__body">
+				<h2 class="submit-popup__title"><?php pll_e('repair'); ?></h2>
+
+				<form class="form" action="">
+					<div class="form__line form__line_name">
+						<label for="name">Имя, Фамилия *</label>
+						<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="Ваше имя, Фамилия"
+							class="input input_name">
+					</div>
+
+					<div class="form__line form__line_tel">
+						<label for="name">Телефон *</label>
+						<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш номер телефона"
+							class="input input_tel">
+					</div>
+
+					<div class="form__line form__line_mail">
+						<label for="name">E-mail *</label>
+						<input autocomplete="off" type="email" name="tel" data-error="Ошибка" placeholder="Ваш e-mail"
+							class="input input_mail">
+					</div>
+					
+			<div class="form__line form__line_number">
+						<label for="name">Номер прибора *</label>
+						<input autocomplete="off" type="number" name="tel" data-error="Ошибка" placeholder="Номер прибора"
+							class="input input_mail">
+					</div>
+
+					<div class="form__line form__line_text">
+						<label for="name">Дата и место покупки *</label>
+				<input autocomplete="off" type="text" name="tel" data-error="Ошибка" placeholder="Дата и место покупки"
+							class="input input_mail">
+					</div>
+					
+					<div class="form__line form__line_text">
+						<label for="name">Описание дефекта *</label>
+						<textarea name="callback-text" id="callback-text" cols="30" rows="5"
+							placeholder="Описание дефекта"></textarea>
+					</div>
+
+					<div class="form__line form__line_policy">
+						<div class="checkbox">
+							<input id="rep-submit" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="rep-submit" class="checkbox__label"><span class="checkbox__text">Согласен с политикой
+									конфидециальности</span></label>
+						</div>
+					</div>
+
+					<div class="form__line form__line_button">
+						<button id="rep-submit-b" type="submit" class="button form__button for-human__button">Отправить</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js?_v=20240319125921"></script>
 <!-- <script src="js/app.min.js?_v=20240319125921"></script> -->
 
