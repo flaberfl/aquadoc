@@ -102,6 +102,7 @@
   /* .intro__media */
   &__media {
     background-color: $bodyColor;
+    text-align: center;
 
     @media (min-width:em(1480)) {
       margin-right: toRem(-40);
@@ -115,17 +116,22 @@
       @media (max-width:em(1480)) {
         max-width: 100%;
       }
+
+      @media (min-width:$tablet) and (max-width: em(1213)) {
+        margin-left: -100px;
+      }
+
     }
   }
 
   /* .intro__footer */
   &__footer {
     display: flex;
-    margin-top: toRem(-164);
+    // margin-top: toRem(-164);
     justify-content: space-between;
 
     @media (max-width:em(1480)) {
-      margin-top: toRem(-90);
+      // margin-top: toRem(-90);
     }
 
     @media (max-width: em(1200)) {
@@ -133,11 +139,11 @@
       row-gap: toRem(36);
       justify-content: center;
       align-items: center;
-      @include adaptiveValue("margin-top", -30, 100);
+      // @include adaptiveValue("margin-top", -30, 100);
     }
 
     @media (max-width:$tablet) {
-      margin-top: toRem(-70);
+      // margin-top: toRem(-70);
     }
   }
 
