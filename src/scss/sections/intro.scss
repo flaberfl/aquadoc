@@ -125,6 +125,10 @@
         margin-left: -100px;
       }
 
+      @media (max-width:$tablet){
+        transform: translate(21%, 0px);
+      }
+
     }
   }
 
