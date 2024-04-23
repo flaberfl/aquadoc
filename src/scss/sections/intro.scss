@@ -79,6 +79,10 @@
     @media (max-width: em(1366)) {
       padding-top: 0;
     }
+
+    @media (max-width: em(380)){
+       margin-left: -10px;
+    }
   }
 
   /* .intro__title */
