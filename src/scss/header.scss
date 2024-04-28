@@ -65,14 +65,14 @@
 	&__left {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 115, 20, 1, 1920, 768);
+		@include adaptiveValue("gap", 115, 20);
 
 	}
 
 	&__right {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 90, 15, 3, 1920, 992);
+		@include adaptiveValue("gap", 90, 15);
 
 		@media (max-width:$tablet) {
 			gap: toRem(40);

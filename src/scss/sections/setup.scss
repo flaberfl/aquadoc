@@ -1,6 +1,6 @@
 .setup {
   @include adaptiveValue("padding-top", 107, 67);
-  background: url('@img/back-main.png') center center no-repeat;
+  background: url('@img/back-main2.png') center center no-repeat;
 
   @media (min-width:em(1701)) {
     margin-top: toRem(-67);
@@ -464,8 +464,6 @@
     left: 0;
   }
 }
-
-
 
 .setup-parts {
   position: absolute;
