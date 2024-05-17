@@ -17,7 +17,6 @@ for (let i = 0; i < links.length; i++) {
   });
 }
 
-
 const parts = document.querySelectorAll(".line-tooltip");
 
 for (let i = 0; i < parts.length; i++) {
